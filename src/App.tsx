@@ -1,5 +1,5 @@
 import './App.css'
-import Top from './components/top'
+import Top from './components/Top'
 
 function App() {
 
