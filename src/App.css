@@ -39,7 +39,7 @@
     opacity: .7;
     z-index: 3;
     position: fixed;
-    transition-duration: .3s;
+    transition-duration: 1s;
 }
 
 .top .nav-btn:hover {
@@ -51,21 +51,45 @@
     width: 80%;
     height:2px;
     background-color: black;
-    border-radius: 2px;
+    border-radius: 5px;
     position: absolute;
     left: calc(50px * 0.1);
 }
 
 .top .nav-btn span:nth-child(1) {
     top: calc(50px * 0.2);
+    transition-duration: 1s;
 }
 
 .top .nav-btn span:nth-child(2) {
     top: calc(50px * 0.5 - 1px);
+    transition-duration: 1s;
 }
 
 .top .nav-btn span:nth-child(3) {
     bottom: calc(50px * 0.2);
+    transition-duration: 1s;
+}
+
+/* openのときのトグルボタン */
+.open .nav-btn {
+    background-color: var(--navy);
+}
+
+.open .nav-btn span:nth-child(1) {
+    transform: rotate(315deg);
+    top: calc(50px * 0.5 - 1px);
+    background-color: #fff;
+}
+
+.open .nav-btn span:nth-child(2) {
+    opacity: 0;
+}
+
+.open .nav-btn span:nth-child(3) {
+    transform: rotate(-315deg);
+    top: calc(50px * 0.5 - 1px);
+    background-color: #fff;
 }
 
 /* ナビゲーション（サイドバー） */
@@ -78,7 +102,7 @@
     top: 0;
     left: -500px;
     z-index: 2;
-    transition-duration: .5s;
+    transition-duration: 1s;
 }
 
 .open .navigation {
