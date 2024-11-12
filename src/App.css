@@ -1,5 +1,6 @@
 :root{
     --navy: #193278;
+    --blue: #005070;
 }
 
 /* **************** トップ画面 **************** */
@@ -7,7 +8,7 @@
     height: 100vh;
     width: 100vw;
     min-width: 300px;
-    background: linear-gradient(to right, var(--navy), #005070);
+    background: linear-gradient(to right, var(--navy), var(--blue));
     color: #fff;
 }
 
@@ -73,7 +74,6 @@
 .top .nav-btn {
     width: 50px;
     height: 50px;
-    background-color: #fff;
     position: fixed;
     top: 20px;
     right: 20px;
@@ -81,7 +81,7 @@
     opacity: .7;
     z-index: 25;
     position: fixed;
-    transition-duration: 1s;
+    transition-duration: .5s;
 }
 
 .top .nav-btn:hover {
@@ -91,37 +91,32 @@
 .top .nav-btn span {
     display: block;
     width: 80%;
-    height:2px;
-    background-color: black;
-    border-radius: 5px;
+    height: 10px;
+    background-color: #fff;
     position: absolute;
     left: calc(50px * 0.1);
 }
 
 .top .nav-btn span:nth-child(1) {
-    top: calc(50px * 0.2);
-    transition-duration: 1s;
+    top: calc(50px * 0.1);
+    transition-duration: .5s;
 }
 
 .top .nav-btn span:nth-child(2) {
-    top: calc(50px * 0.5 - 1px);
-    transition-duration: 1s;
+    top: calc(50px * 0.5 - 5px);
+    transition-duration: .5s;
 }
 
 .top .nav-btn span:nth-child(3) {
-    bottom: calc(50px * 0.2);
-    transition-duration: 1s;
+    bottom: calc(50px * 0.1);
+    transition-duration: .5s;
 }
 
 /* openのときのトグルボタン */
-.open .nav-btn {
-    background-color: var(--navy);
-}
-
 .open .nav-btn span:nth-child(1) {
     transform: rotate(315deg);
-    top: calc(50px * 0.5 - 1px);
-    background-color: #fff;
+    top: calc(50px * 0.5 - 5px);
+    background-color: var(--navy);
 }
 
 .open .nav-btn span:nth-child(2) {
@@ -130,8 +125,8 @@
 
 .open .nav-btn span:nth-child(3) {
     transform: rotate(-315deg);
-    top: calc(50px * 0.5 - 1px);
-    background-color: #fff;
+    top: calc(50px * 0.5 - 5px);
+    background-color: var(--navy);
 }
 
 /* ナビゲーション（サイドバー） */
@@ -144,7 +139,7 @@
     top: 0;
     left: -200vw;
     z-index: 20;
-    transition-duration: 1s;
+    transition-duration: .8s;
 }
 
 .open .navigation {
