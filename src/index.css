@@ -1,6 +1,8 @@
 body {
     margin: 0;
     padding: 0;
+    background: linear-gradient(to right, var(--navy), var(--blue));
+    color: #fff;
 }
 
 .poiret-one-regular {
