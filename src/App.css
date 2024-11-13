@@ -3,19 +3,23 @@
     --blue: #005070;
 }
 
+
+
 /* **************** 共通事項 **************** */
 .section-title {
     width: 100%;
     height: 200px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .section-title h2 {
+    height: 50px;
     font-family: "Poiret One", sans-serif;
     font-size: 40px;
 }
+
 
 
 /* **************** トップ画面 **************** */
@@ -90,7 +94,7 @@
     top: 20px;
     right: 20px;
     border-radius: 2px;;
-    z-index: 25;
+    z-index: 60;
     position: fixed;
     transition-duration: .5s;
 }
@@ -145,7 +149,7 @@
     opacity: 0;
     top: 0;
     left: -200vw;
-    z-index: 20;
+    z-index: 50;
     transition-duration: .8s;
 }
 
@@ -154,9 +158,12 @@
     opacity: 1;
 }
 
+
+
 /* **************** 自己紹介画面 **************** */
 .about {
     width: 100%;
+    min-height: 500px;
 }
 
 .about .main {
@@ -167,7 +174,7 @@
 /* 挿入画像 */
 .about .main .img {
     width: 60%;
-    margin-left: calc(100vw * 0.1);
+    margin-left: calc(100vw * 0.15);
 }
 
 .about .main .img img {
@@ -177,14 +184,14 @@
 
 /* 自己紹介文 */
 .about .main .text-area {
-    width: 60%;
+    width: 80%;
     min-height: 200px;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(2px);
     position: absolute;
     top: 50px;
-    right: 5vw;
+    right: 10vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -193,4 +200,190 @@
 .about .main .text-area .text {
     width: 90%;
     height: 90%;
+}
+
+
+
+/* **************** 制作物画面 **************** */
+.works {
+    width: 100%;
+}
+
+/* 個々の制作物レイアウト */
+.works .items {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.works .items .item-list {
+    width: 100%;
+    height: 50vh;
+}
+
+.works .items .work-item {
+    width: 100%;
+    height: 500px;
+}
+
+/* 作品サムネイル */
+.works .items .work-item .thumbnail {
+    width: 100%;
+    height: 45vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.works .items .work-item .thumbnail img {
+    display: block;
+    width: 95%;
+    height: 40vw;
+    margin-inline: auto;
+    object-fit: cover;
+    object-position: top;
+    box-shadow: 0px 0px 5px #aaa;
+    transition-duration: .3s;
+}
+
+.works .items .work-item .thumbnail img:hover {
+    width: 100%;
+    height: 45vw;
+    box-shadow: 0px 0px 15px #aaa;
+}
+
+/* 作品タイトル */
+.work-item .title {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.work-item .title h3 {
+    margin: 0;
+    font-weight: 100;
+}
+
+/* 作品の詳細ページ */
+.works .open .detail {
+    width: 80%;
+    height: 70vh;
+    position: fixed;
+    top: 15vh;
+    left: 10vw;
+    opacity: 1;
+    box-shadow: 0px 0px 20px #aaa;
+    background: rgba(0, 80, 112, 0.9);
+    backdrop-filter: blur(20px);
+    z-index: 30;
+    transition-duration: .8s;
+    overflow: scroll;
+}
+
+.works .open .detail .work-title {
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+    font-family: "Poiret One", sans-serif;
+}
+
+/* 説明文 */
+.works .open .detail .explanation {
+    width: 90%;
+    margin-inline: auto;
+}
+
+.works .open .detail .explanation p {
+    margin: 20px 0;
+    font-size: 0.9rem;
+}
+
+/* 使用技術 */
+.works .open .detail .skills {
+    width: 90%;
+    margin-inline: auto;
+}
+
+.works .open .detail .skills ul {
+    margin: 0;
+    padding: 0 10px;
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.works .open .detail .skills ul li {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2) ;
+}
+
+/* url */
+.works .open .detail .url {
+    width: 90%;
+    height: 40px;
+    margin: 20px auto;
+    display: flex;
+}
+
+.works .open .detail .url .url-item {
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.works .open .detail .url .url-item a i {
+    font-size: 25px;
+    color: #fff;
+}
+
+
+/* マスク */
+.works .open .mask {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+
+.works .close {
+    position: fixed;
+    opacity: 0;
+    z-index: -10;
+}
+
+
+
+/* 詳細画面を閉じるボタン */
+.works .open .close-btn {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.works .open .close-btn span {
+    display: block;
+    width: 90%;
+    height: 6px;
+    background-color: #fff;
+    position: absolute;
+    top: 17px;
+    left: 2px;
+}
+
+.works .open .close-btn span:nth-child(1) {
+    transform: rotate(45deg);
+}
+.works .open .close-btn span:nth-child(2) {
+    transform: rotate(-45deg);
 }
