@@ -157,6 +157,7 @@
 /* **************** 自己紹介画面 **************** */
 .about {
     width: 100%;
+    min-height: 500px;
 }
 
 .about .main {
@@ -167,7 +168,7 @@
 /* 挿入画像 */
 .about .main .img {
     width: 60%;
-    margin-left: calc(100vw * 0.1);
+    margin-left: calc(100vw * 0.15);
 }
 
 .about .main .img img {
@@ -177,14 +178,14 @@
 
 /* 自己紹介文 */
 .about .main .text-area {
-    width: 60%;
+    width: 80%;
     min-height: 200px;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(2px);
     position: absolute;
     top: 50px;
-    right: 5vw;
+    right: 10vw;
     display: flex;
     justify-content: center;
     align-items: center;
