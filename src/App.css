@@ -315,8 +315,29 @@
     background: rgba(255, 255, 255, 0.2) ;
 }
 
+/* url */
+.works .open .detail .url {
+    width: 90%;
+    height: 40px;
+    margin: 20px auto;
+    display: flex;
+}
+
+.works .open .detail .url .url-item {
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.works .open .detail .url .url-item a i {
+    font-size: 25px;
+    color: #fff;
+}
 
 
+/* マスク */
 .works .open .mask {
     width: 100vw;
     height: 100vh;
@@ -327,9 +348,12 @@
 }
 
 .works .close {
+    position: fixed;
     opacity: 0;
     z-index: -10;
 }
+
+
 
 /* 詳細画面を閉じるボタン */
 .works .open .close-btn {
