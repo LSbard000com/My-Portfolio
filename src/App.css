@@ -214,6 +214,11 @@
     margin: 0 auto;
 }
 
+.works .items .item-list {
+    width: 100%;
+    height: 50vh;
+}
+
 .works .items .work-item {
     width: 100%;
     height: 500px;
@@ -272,6 +277,7 @@
     backdrop-filter: blur(20px);
     z-index: 30;
     transition-duration: .8s;
+    overflow: scroll;
 }
 
 .works .open .detail .work-title {

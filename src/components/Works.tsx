@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import matrixCalculation from '../assets/img/行列計算.png'
+import mathQuestionBox from '../assets/img/みんなの数学質問箱.png'
 
 
 type WorkItemProps = {
@@ -80,15 +81,30 @@ const Works = () => {
 
         {/* 個々の作品を表示 */}
         <div className='items'>
-            <WorksItem 
-                img={matrixCalculation}
-                title='行列計算アプリ'
-                skills={['HTML','CSS','JavaScript','React','Git','GitHub',' Netlify']}
-                explanation='行列の積の計算ができるアプリケーションです。計算する行列のサイズを自由に指定することができます。Reactを初めて用いたアプリケーションで、この開発を通してステートやフックの基本的な使い方を理解することができました。'
-                url={{github: 'https://github.com/LSbard000com/Matrix-Calculation', link:'https://poetic-cascaron-d91dd2.netlify.app/'}}
-                setDetail={detailOpenAndClose}
-                setWorkInfo={setWorkInfo}
-            />
+            <div className='item-list'>
+                <WorksItem 
+                    img={matrixCalculation}
+                    title='行列計算アプリ'
+                    skills={['HTML','CSS','JavaScript','React','Git','GitHub',' Netlify']}
+                    explanation='行列の積の計算ができるアプリケーションです。計算する行列のサイズを自由に指定することができます。Reactを初めて用いたアプリケーションで、この開発を通してステートやフックの基本的な使い方を理解することができました。'
+                    url={{github: 'https://github.com/LSbard000com/Matrix-Calculation', link:'https://poetic-cascaron-d91dd2.netlify.app/'}}
+                    setDetail={detailOpenAndClose}
+                    setWorkInfo={setWorkInfo}
+                />
+            </div>
+
+            <div className='item-list'>
+                <WorksItem 
+                    img={mathQuestionBox}
+                    title='みんなの数学質問箱'
+                    skills={['HTML','CSS','TypeScript','React','React Router','Firebase Firestore','Firebase Authentication','Fuse.js','Git','GitHub']}
+                    explanation='数学に関する質問を投稿するWebサイトです。質問に対して回答したり、カテゴリやキーワードで検索する機能を作りました。また、Firebaseを用いてデータベースと認証機能を実装しました。TypeScriptやFirebase、ルーティングなど初めて使った技術が多かったため、かなりの試行錯誤が必要でした。この開発を通して学ぶことも多かったのでとても良い開発になりました。'
+                    url={{github: 'https://github.com/LSbard000com/math-question-box-app', link:''}}
+                    setDetail={detailOpenAndClose}
+                    setWorkInfo={setWorkInfo}
+                />
+            </div>
+
         </div>
 
         {/* 作品の詳細画面 */}
