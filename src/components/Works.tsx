@@ -91,6 +91,10 @@ const Works = () => {
                         ))}
                     </ul>
                 </div>
+                <div className='close-btn' onClick={detailOpenAndClose}>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
             <div className='mask' onClick={detailOpenAndClose}></div>
         </div>
