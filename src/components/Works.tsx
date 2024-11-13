@@ -12,7 +12,7 @@ const WorksItem:React.FC<WorkItemProps> = ({img, title}) => {
             <div className='thumbnail'>
                 <img src={img} />
             </div>
-            <div className='work-content'>
+            <div className='title'>
                 <h3>{title}</h3>
             </div>
         </div>
