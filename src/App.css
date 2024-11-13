@@ -11,10 +11,11 @@
     height: 200px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .section-title h2 {
+    height: 50px;
     font-family: "Poiret One", sans-serif;
     font-size: 40px;
 }
