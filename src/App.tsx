@@ -1,4 +1,5 @@
 import './App.css'
+import About from './components/About'
 import Top from './components/Top'
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
   return (
     <>
       <Top />
+      <About />
     </>
   )
 }
