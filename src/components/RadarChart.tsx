@@ -21,7 +21,7 @@ const RadarChart: React.FC = () => {
         datasets: [
             {
                 label: 'My Skills',
-                data: [2, 2, 3, 2, 3],
+                data: [2, 2, 2, 2, 2],
                 backgroundColor: 'rgba(255, 255, 255, 0.1)',
                 borderColor: 'rgba(255, 255, 255, 1)',
                 borderWidth: 1,

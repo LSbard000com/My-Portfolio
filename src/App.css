@@ -411,18 +411,18 @@
 }
 
 .my-skills .chart-area .chart {
-    width: 300px;
-    height: 300px;
+    width: 80vw;
+    height: 80vw;
     margin-inline: auto;
 }
 
 
 .my-skills .chart-area .chart-mask {
-    width: 300px;
-    height: 300px;
+    width: 80vw;
+    height: 80vw;
     border-radius: 50%;
     box-shadow: 0px 0px 20px #aaa;
     position: absolute;
     top: 35px;
-    left: calc(100vw / 2 - 150px)
+    left: 10vw;
 }
