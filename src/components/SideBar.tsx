@@ -13,7 +13,12 @@ const SideBar = () => {
         </div>
         <div>
             <nav className='navigation'>
-
+                <ul>
+                    <li onClick={()=>setOpen(!open)}><a href='#top'>Top</a></li>
+                    <li onClick={()=>setOpen(!open)}><a href='#about'>About</a></li>
+                    <li onClick={()=>setOpen(!open)}><a href='#works'>Works</a></li>
+                    <li onClick={()=>setOpen(!open)}><a href='#skills'>Skills</a></li>
+                </ul>
             </nav>
         </div>
     </div>

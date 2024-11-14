@@ -6,7 +6,7 @@ const top = () => {
     const [open, setOpen] = useState<boolean>(false)
 
   return (
-    <div className={`top ${open ? 'open' : ''}`}>
+    <div id='top' className={`top ${open ? 'open' : ''}`}>
         <div className='title'>
             <img src={topImage} alt='top image' />
             <div className='title-text name'>

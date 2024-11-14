@@ -4,7 +4,7 @@ import RadarChart from './RadarChart';
 
 const Skills: React.FC = () => {
     return (
-        <div className='my-skills'>
+        <div id='skills' className='my-skills'>
             <div className="section-title">
                 <h2>Skills</h2>
             </div>
