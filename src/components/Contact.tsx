@@ -2,7 +2,7 @@ import myPhoto from '../assets/img/自己紹介画像.jpg'
 
 const Contact = () => {
   return (
-    <div className="contact">
+    <div id='contact' className="contact">
 
         {/* タイトル */}
         <div className="section-title">
