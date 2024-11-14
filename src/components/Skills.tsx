@@ -12,7 +12,9 @@ const Skills: React.FC = () => {
                 <div className='chart'>
                     <RadarChart />
                 </div>
-                <div className='chart-mask'></div>
+                <div className='chart-mask'>
+                    <div></div>
+                </div>
             </div>
         </div>
     );
