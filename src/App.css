@@ -22,6 +22,182 @@
 
 
 
+/* **************** サイドバー **************** */
+.sidebar .nav-btn {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    border-radius: 2px;;
+    z-index: 60;
+    position: fixed;
+    transition-duration: .5s;
+}
+
+.sidebar .nav-btn span {
+    display: block;
+    width: 80%;
+    height: 10px;
+    background-color: #fff;
+    position: absolute;
+    left: calc(50px * 0.1);
+}
+
+.sidebar .nav-btn span:nth-child(1) {
+    top: calc(50px * 0.1);
+    transition-duration: .5s;
+}
+
+.sidebar .nav-btn span:nth-child(2) {
+    top: calc(50px * 0.5 - 5px);
+    transition-duration: .5s;
+}
+
+.sidebar .nav-btn span:nth-child(3) {
+    bottom: calc(50px * 0.1);
+    transition-duration: .5s;
+}
+
+/* openのときのトグルボタン */
+.open .nav-btn span:nth-child(1) {
+    transform: rotate(315deg);
+    top: calc(50px * 0.5 - 5px);
+    background-color: var(--navy);
+}
+
+.open .nav-btn span:nth-child(2) {
+    opacity: 0;
+}
+
+.open .nav-btn span:nth-child(3) {
+    transform: rotate(-315deg);
+    top: calc(50px * 0.5 - 5px);
+    background-color: var(--navy);
+}
+
+/* ナビゲーション（サイドバー） */
+.navigation {
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: -200vw;
+    z-index: 50;
+    transition-duration: .8s;
+}
+
+.open .navigation {
+    left: 0;
+    opacity: 1;
+}
+
+.navigation .nav {
+    width: 100%;
+    margin: 15vh 0 0;
+}
+
+.navigation .nav ul {
+    width: 60%;
+    margin-inline: auto;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation .nav ul li {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 5vh;
+    line-height: 60px;
+    font-family: "Poiret One", sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.navigation .nav ul li a {
+    text-decoration: none;
+    color: #000;
+    position: relative;
+}
+
+.navigation .nav ul li a::after {
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #000000;
+    bottom: -5px; /*アンダーラインが現れ始める位置（aタグの下辺からの高さ）*/
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    }
+    
+.navigation .nav ul li a:hover::after {
+    visibility: visible;
+    bottom: 1px;
+    opacity: 1;
+}
+
+.navigation .links {
+    width: 100%;
+    margin-top: 5vh;
+}
+
+.navigation .links ul {
+    width: 60%;
+    margin-inline: auto;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation .links ul li {
+    width: 150px;
+    margin-inline: auto;
+    height: 50px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.navigation .links ul li a {
+    color: #000;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.navigation .links ul li i {
+    height: 50px;
+    line-height: 50px;
+    color: #000;
+    font-size: 30px;
+}
+
+.navigation .links ul li a::after {
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #000000;
+    bottom: -5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.navigation .links ul li a:hover::after {
+    visibility: visible;
+    bottom: 1px;
+    opacity: 1;
+}
+
+
+
 /* **************** トップ画面 **************** */
 .top {
     height: 100vh;
@@ -90,80 +266,6 @@
     position: absolute;
     top: 60vh;
     right: 2vw;
-}
-
-
-
-/* トグルボタン */
-.top .nav-btn {
-    width: 50px;
-    height: 50px;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    border-radius: 2px;;
-    z-index: 60;
-    position: fixed;
-    transition-duration: .5s;
-}
-
-.top .nav-btn span {
-    display: block;
-    width: 80%;
-    height: 10px;
-    background-color: #fff;
-    position: absolute;
-    left: calc(50px * 0.1);
-}
-
-.top .nav-btn span:nth-child(1) {
-    top: calc(50px * 0.1);
-    transition-duration: .5s;
-}
-
-.top .nav-btn span:nth-child(2) {
-    top: calc(50px * 0.5 - 5px);
-    transition-duration: .5s;
-}
-
-.top .nav-btn span:nth-child(3) {
-    bottom: calc(50px * 0.1);
-    transition-duration: .5s;
-}
-
-/* openのときのトグルボタン */
-.open .nav-btn span:nth-child(1) {
-    transform: rotate(315deg);
-    top: calc(50px * 0.5 - 5px);
-    background-color: var(--navy);
-}
-
-.open .nav-btn span:nth-child(2) {
-    opacity: 0;
-}
-
-.open .nav-btn span:nth-child(3) {
-    transform: rotate(-315deg);
-    top: calc(50px * 0.5 - 5px);
-    background-color: var(--navy);
-}
-
-/* ナビゲーション（サイドバー） */
-.navigation {
-    width: 100%;
-    height: 100vh;
-    background-color: #fff;
-    position: fixed;
-    opacity: 0;
-    top: 0;
-    left: -200vw;
-    z-index: 50;
-    transition-duration: .8s;
-}
-
-.open .navigation {
-    left: 0;
-    opacity: 1;
 }
 
 

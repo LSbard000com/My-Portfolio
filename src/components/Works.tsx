@@ -73,7 +73,7 @@ const Works = () => {
 
 
   return (
-    <div className="works">
+    <div id='works' className="works">
         {/* タイトル */}
         <div className="section-title">
             <h2>Works</h2>

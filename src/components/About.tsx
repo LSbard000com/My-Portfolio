@@ -2,7 +2,7 @@ import aboutImg from '../assets/img/IMG_7007.jpeg'
 
 const About = () => {
   return (
-    <div className="about">
+    <div id='about' className="about">
       <div className="section-title">
         <h2>About</h2>
       </div>
