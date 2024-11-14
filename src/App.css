@@ -96,20 +96,22 @@
 
 .navigation .nav {
     width: 100%;
-    margin: 15vh 0 0;
+    height: 60%;
+    margin: 10vh 0 0;
 }
 
 .navigation .nav ul {
     width: 60%;
+    height: 100%;
     margin-inline: auto;
     padding: 0;
     list-style: none;
 }
 
 .navigation .nav ul li {
+    height: 15%;
     width: 100%;
-    height: 60px;
-    margin-bottom: 5vh;
+    margin-bottom: 5%;
     line-height: 60px;
     font-family: "Poiret One", sans-serif;
     font-size: 2.5rem;
@@ -143,12 +145,14 @@
 
 .navigation .links {
     width: 100%;
-    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .navigation .links ul {
     width: 60%;
-    margin-inline: auto;
+    margin: 0;
     padding: 0;
     list-style: none;
 }
