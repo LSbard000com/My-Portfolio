@@ -8,6 +8,7 @@ import {
     Filler,
     Tooltip,
     Legend,
+    ChartOptions,
 } from 'chart.js';
 
 // Chart.jsにレーダーチャートの必要なコンポーネントを登録
@@ -21,7 +22,6 @@ const RadarChart: React.FC = () => {
             {
                 label: 'My Skills',
                 data: [2, 2, 3, 2, 3],
-                color: 'white',
                 backgroundColor: 'rgba(255, 255, 255, 0.1)',
                 borderColor: 'rgba(255, 255, 255, 1)',
                 borderWidth: 1,
@@ -30,11 +30,18 @@ const RadarChart: React.FC = () => {
     };
 
     // チャートオプションの設定
-    const options = {
+    const options: ChartOptions<'radar'> = {
         responsive: true,
         plugins: {
             legend: {
                 position: 'top' as const,
+                labels: {
+                    color: 'white',  // 凡例ラベルの色を設定
+                    font: {
+                        size: 20,  // フォントサイズを指定
+                        weight: 'bold'  // 太字などスタイルも設定
+                    },
+                }
             },
             tooltip: {
                 enabled: true,
@@ -44,6 +51,10 @@ const RadarChart: React.FC = () => {
             r: {
                 angleLines: {
                     display: true,
+                    color: 'rgba(255, 255, 255, 0.3)',
+                },
+                grid: {
+                    color: 'rgba(255, 255, 255, 0.3)' // グリッド線の色を指定
                 },
                 suggestedMin: 0,
                 suggestedMax: 5,

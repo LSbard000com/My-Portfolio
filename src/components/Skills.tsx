@@ -4,9 +4,11 @@ import RadarChart from './RadarChart';
 const Skills: React.FC = () => {
     return (
         <div className='my-skills'>
-            <h1>React Radar Chart Example</h1>
-            <div className='chart'>
-                <RadarChart />
+            <div className='chart-area'>
+                <div className='chart'>
+                    <RadarChart />
+                </div>
+                <div className='chart-mask'></div>
             </div>
         </div>
     );
