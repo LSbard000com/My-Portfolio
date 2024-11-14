@@ -505,9 +505,9 @@
     margin: 50px auto;
 }
 
+/* チャート */
 .my-skills .chart-area {
     width: 100%;
-    height: 90vw;
     margin-inline: auto;
     position: relative;
 }
@@ -516,15 +516,33 @@
     width: 80vw;
     height: 80vw;
     margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-skills .chart-area .chart div {
+    width: 77vw;
+    height: 77vw;
+    transition-duration: .5s;
+}
+
+.my-skills .chart-area .chart div:hover {
+    width: 80vw;
+    height: 80vw;
 }
 
 
-.my-skills .chart-area .chart-mask {
-    width: 80vw;
-    height: 80vw;
-    border-radius: 50%;
-    box-shadow: 0px 0px 20px #aaa;
-    position: absolute;
-    top: 35px;
-    left: 10vw;
+/* チャートの説明欄 */
+.my-skills .chart-area .chart-explanation {
+    width: 100%;
+    height: 200px;
+}
+
+.chart-explanation table {
+    width: 200px;
+    margin: 20px auto;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 10px #aaa;
 }

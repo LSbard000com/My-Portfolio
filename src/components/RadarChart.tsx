@@ -17,11 +17,11 @@ ChartJS.register(RadialLinearScale, PointElement, LineElement, Filler, Tooltip, 
 const RadarChart: React.FC = () => {
     // チャートデータの設定
     const data = {
-        labels: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React'],
+        labels: ['HTML/CSS', 'JavaScript', 'Next.js', 'React', 'TypeScript'],
         datasets: [
             {
                 label: 'My Skills',
-                data: [2, 2, 2, 2, 2],
+                data: [2, 2, 1, 2, 2],
                 backgroundColor: 'rgba(255, 255, 255, 0.1)',
                 borderColor: 'rgba(255, 255, 255, 1)',
                 borderWidth: 1,
