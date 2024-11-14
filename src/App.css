@@ -394,3 +394,11 @@
 .works .open .close-btn span:nth-child(2) {
     transform: rotate(-45deg);
 }
+
+
+/* **************** 技術紹介画面 **************** */
+.my-skills .chart {
+    width: 60vw;
+    height: 60vw;
+    margin: 0 auto;
+}
