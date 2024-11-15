@@ -143,6 +143,7 @@
     opacity: 1;
 }
 
+/* 各種リンク */
 .navigation .links {
     width: 100%;
     display: flex;
@@ -161,6 +162,7 @@
     width: 150px;
     margin-inline: auto;
     height: 50px;
+    font-family: "Poiret One", sans-serif;
     display: flex;
     gap: 10px;
     align-items: center;

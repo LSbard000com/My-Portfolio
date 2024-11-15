@@ -28,6 +28,10 @@ const SideBar = () => {
             <div className='links'>
                 <ul>
                     <li>
+                        <i className="fa-regular fa-envelope"></i>
+                        <a href='mailto:m.komukai0123@gmail.com'>e-mail</a>
+                    </li>
+                    <li>
                         <i className="fa-brands fa-github"></i>
                         <a href='https://github.com/LSbard000com'>GitHub</a>
                     </li>
