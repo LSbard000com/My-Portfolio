@@ -1,4 +1,3 @@
-
 import myPhoto from '../assets/img/自己紹介画像.jpg'
 import Timeline from './Timeline'
 import Title from './Title'

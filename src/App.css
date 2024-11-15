@@ -45,7 +45,6 @@
     right: 20px;
     border-radius: 2px;;
     z-index: 60;
-    position: fixed;
     transition-duration: .5s;
 }
 
