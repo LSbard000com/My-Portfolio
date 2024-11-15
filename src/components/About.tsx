@@ -1,5 +1,6 @@
-import aboutImg from '../assets/img/IMG_7007.jpeg'
+
 import myPhoto from '../assets/img/自己紹介画像.jpg'
+import TimeLine from './TimeLine'
 import Title from './Title'
 
 const About = () => {
@@ -29,6 +30,9 @@ const About = () => {
               </tbody>
             </table>
           </div>
+        </div>
+        <div className='timeline'>
+          <TimeLine />
         </div>
       </div>
     </div>
