@@ -1,5 +1,6 @@
 import React from 'react';
 import RadarChart from './RadarChart';
+import Title from './Title';
 
 
 const Skills: React.FC = () => {
@@ -7,9 +8,10 @@ const Skills: React.FC = () => {
         <div id='skills' className='my-skills'>
 
             {/* タイトル */}
-            <div className="section-title">
-                <h2>Skills</h2>
-            </div>
+            <Title 
+                title='Skills'
+                text='使用している技術を紹介します'
+            />
 
             {/* チャート */}
             <div className='chart-area'>

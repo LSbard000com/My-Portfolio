@@ -1,13 +1,15 @@
 import myPhoto from '../assets/img/自己紹介画像.jpg'
+import Title from './Title'
 
 const Contact = () => {
   return (
     <div id='contact' className="contact">
 
         {/* タイトル */}
-        <div className="section-title">
-            <h2>Contact</h2>
-        </div>
+        <Title 
+            title='Contact'
+            text='下記のリンクより気軽にお問い合わせください'
+        />
 
         {/* 自己紹介画像 */}
         <div className="plofile-img">

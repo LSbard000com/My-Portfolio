@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import matrixCalculation from '../assets/img/行列計算.png'
 import mathQuestionBox from '../assets/img/みんなの数学質問箱.png'
+import Title from './Title';
 
 
 type WorkItemProps = {
@@ -75,9 +76,10 @@ const Works = () => {
   return (
     <div id='works' className="works">
         {/* タイトル */}
-        <div className="section-title">
-            <h2>Works</h2>
-        </div>
+        <Title 
+            title='Works'
+            text='日々の学びを形に残した制作物をご覧ください'
+        />
 
         {/* 個々の作品を表示 */}
         <div className='items'>
