@@ -301,6 +301,54 @@
     position: relative;
 }
 
+/* プロフィール */
+.about .main .profile {
+    width: 100%;
+}
+
+.about .main .profile .photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .main .profile .photo img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    transform: scale(1.5); 
+    transform-origin: 3px 0px;
+}
+
+/* 情報 */
+.about .main .profile .info {
+    width: 300px;
+    margin: 10px auto;
+}
+
+.about .main .profile .info table {
+    width: 100%;
+    margin-inline: auto;
+}
+
+.about .main .profile .info table th {
+    text-align: right;
+    font-weight: 100;
+    font-size: 14px;
+}
+
+.about .main .profile .info table td {
+    font-size: 14px;
+}
+
+
+
 /* 挿入画像 */
 .about .main .img {
     width: 60%;
@@ -319,7 +367,6 @@
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(2px);
-    position: absolute;
     top: 50px;
     right: 10vw;
     display: flex;
