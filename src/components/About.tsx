@@ -1,11 +1,13 @@
 import aboutImg from '../assets/img/IMG_7007.jpeg'
+import Title from './Title'
 
 const About = () => {
   return (
     <div id='about' className="about">
-      <div className="section-title">
-        <h2>About</h2>
-      </div>
+      <Title 
+        title='About'
+        text='自己紹介をします'
+       />
       <div className='main'>
         <div className='img'>
           <img src={aboutImg} />

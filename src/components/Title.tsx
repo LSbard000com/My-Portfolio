@@ -5,11 +5,16 @@ type TitleProps = {
     text: string;
 }
 
-const Title:React.FC<TitleProps> = ({}) => {
+const Title:React.FC<TitleProps> = ({title, text}) => {
   return (
-    <div>
-      
+    <>
+    <div className="section-title">
+        <h2>{title}</h2>
     </div>
+    <div className='section-text'>
+        <p>{text}</p>
+    </div>
+    </>
   )
 }
 
