@@ -5,7 +5,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
-const TimeLine = () => {
+const Timeline = () => {
     // タイムラインのデータ
     const timelineElements = [
         {
@@ -69,4 +69,4 @@ const TimeLine = () => {
       );
     };
 
-export default TimeLine
+export default Timeline

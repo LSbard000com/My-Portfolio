@@ -1,6 +1,6 @@
 
 import myPhoto from '../assets/img/自己紹介画像.jpg'
-import TimeLine from './TimeLine'
+import Timeline from './Timeline'
 import Title from './Title'
 
 const About = () => {
@@ -32,7 +32,7 @@ const About = () => {
           </div>
         </div>
         <div className='timeline'>
-          <TimeLine />
+          <Timeline />
         </div>
       </div>
     </div>
