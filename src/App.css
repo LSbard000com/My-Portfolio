@@ -347,6 +347,17 @@
     font-size: 14px;
 }
 
+/*  */
+.about .main .timeline {
+    width: 80%;
+    margin: 10px auto;
+}
+
+/* .vertical-timeline-element--work {
+    opacity: 0.3;
+} */
+
+
 
 /* **************** 制作物画面 **************** */
 .works {
