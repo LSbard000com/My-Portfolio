@@ -1,11 +1,13 @@
 import aboutImg from '../assets/img/IMG_7007.jpeg'
+import Title from './Title'
 
 const About = () => {
   return (
-    <div className="about">
-      <div className="section-title">
-        <h2>about</h2>
-      </div>
+    <div id='about' className="about">
+      <Title 
+        title='About'
+        text=''
+       />
       <div className='main'>
         <div className='img'>
           <img src={aboutImg} />
