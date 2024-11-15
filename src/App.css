@@ -659,7 +659,8 @@
 }
 
 /* ジャンプボタン */
-.footer .jump-btn {
+/* open */
+.footer .open .jump-btn {
     width: 60px;
     height: 60px;
     border-radius: 100%;
@@ -667,9 +668,11 @@
     position: fixed;
     right: 20px;
     bottom: calc(10vh - 30px);
+    opacity: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition-duration: .5s;
 }
 
 .footer .jump-btn a {
@@ -695,4 +698,12 @@
 .footer .jump-btn a span:nth-child(2) {
     transform: rotate(45deg);
     right: 10.4px;
+}
+
+/* close */
+.footer .close .jump-btn {
+    position: fixed;
+    right: 20px;
+    bottom: -20vh;
+    opacity: 0;
 }
