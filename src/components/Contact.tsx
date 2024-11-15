@@ -20,6 +20,10 @@ const Contact = () => {
         <div className='contents'>
             <ul>
                 <li>
+                    <a href='mailto:m.komukai0123@gmail.com'><i className="fa-regular fa-envelope"></i></a>
+                    <span>e-mail</span>
+                </li>
+                <li>
                     <a href='https://github.com/LSbard000com'><i className="fa-brands fa-github"></i></a>
                     <span>GitHub</span>
                 </li>
