@@ -6,7 +6,7 @@ const About = () => {
     <div id='about' className="about">
       <Title 
         title='About'
-        text='自己紹介をします'
+        text=''
        />
       <div className='main'>
         <div className='img'>
