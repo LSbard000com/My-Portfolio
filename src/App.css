@@ -3,6 +3,11 @@
     --blue: #005070;
 }
 
+/* **************** ヘッダー **************** */
+.header {
+    display: none;
+}
+
 
 
 /* **************** セクションタイトル **************** */
@@ -750,12 +755,176 @@
 
 /* ********************************************** PC画面 ********************************************** */
 @media (min-width: 1000px) {
-    /* **************** ヘッダー **************** */
+    /* **************** サイドバー非表示 **************** */
     .sidebar .nav-btn {
         display: none;
     }
 
-   
+    /* **************** ヘッダー **************** */
+    .header {
+        width: 100%;
+        display: block;
+        position: fixed;
+        top: 0;
+        z-index: 50;
+    }
+
+    .header-area {
+        display: flex;
+        justify-content: space-between;
+        font-family: "Poiret One", sans-serif;
+    }
+
+    .header .open {
+        width: 100%;
+        height: 60px;
+        background-color: rgba(255, 255, 255, 0.9);
+        transition-duration: .5s;
+    }
+
+    .header .close {
+        height: 0px;
+        opacity: 0;
+        overflow: hidden;
+        transition-duration: .5s;
+    }
+
+    /* タイトル */
+    .header .title {
+        width: 400px;
+        height: 100%;
+        margin-inline: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header .title a {
+        text-decoration: none;
+    }
+
+    .header .title a .title-h {
+        margin: 0;
+        line-height: 60px;
+        color: #000;
+    }
+
+    /* ヘッダーナビゲーション*/
+    .header .header-navigation {
+        display: flex;
+        margin-right: 50px;
+    }
+
+
+    .header .header-nav {
+        width: 200px;
+        opacity: 0.9;
+        cursor: pointer;
+    }
+
+    /* ナビゲーションタイトル */
+    .header .header-nav h2 {
+        height: 60px;
+        line-height: 67px;
+        margin: 0;
+        text-align: center;
+        color: #000;
+    }
+
+    /* ナビゲーションのタブ内 */
+    .header .header-nav nav {
+        height: 0;
+        background-color: #fff;
+        opacity: 0;
+        overflow: hidden;
+        transition-duration: .5s;
+    }
+
+    .header .open-sec nav {
+        height: 300px;
+        opacity: 1;
+        transition-duration: .5s;
+    }
+
+    .header .open-cont nav {
+        height: 200px;
+        opacity: 1;
+        transition-duration: .5s;
+    }
+
+    .header .header-nav nav ul {
+        width: 100%;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .header .header-nav .section-items ul li {
+        width: 100px;
+        margin: 35px auto 0;
+        text-align: center;
+    }
+
+    .header .header-nav .link-items ul li {
+        width: 100px;
+        margin: 28px auto 0;
+        text-align: center;
+    }
+
+    .header .header-nav nav ul li a {
+        text-decoration: none;
+        color: #000;
+        font-size: 24px;
+        position: relative;
+    }
+
+    .header .header-nav nav ul li a::after {
+        position: absolute;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background: #000000;
+        bottom: -3px; 
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
+    }
+
+    .header .header-nav nav ul li a:hover::after {
+        visibility: visible;
+        bottom: 0px;
+        opacity: 1;
+    }
+
+    .header .links {
+        width: 200px;
+    }
+
+    .header .links .link-items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header .links .link-items ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        gap: 40px;
+    }
+
+    .header .links .link-items ul li {
+        margin-top: 4px;
+        font-size: 25px;
+    }
+
+    .header .header-nav nav ul li a i{
+        color: #000;
+        font-size: 20px;
+    }
+
 
 
 
