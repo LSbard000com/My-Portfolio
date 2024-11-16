@@ -292,6 +292,11 @@
     right: 2vw;
 }
 
+/* トップ画面のナビゲーション */
+.top-navigation {
+    display: none;
+}
+
 
 
 /* **************** 自己紹介画面 **************** */
@@ -939,5 +944,99 @@
     .section-text p {
         font-size: 20px;
     }
+
+
+    /* **************** トップ画面 **************** */
+    .top {
+        position: relative;
+    }
+
+    .top .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: initial;
+    }
+
+    /* 背景画像 */
+    .top .title img {
+        width: 40%;
+        margin-right: 5vw;
+        position: initial;
+    }
+
+    /* タイトルテキスト */
+    .title .title-texts {
+        width: 40%;
+        height: 80%;
+        position: relative;
+    }
+
+    .title .title-text {
+        height: 20vh;
+        margin: 0;
+    }
+
+    .title .name {
+        top: 10vh;
+        left: 5vw;
+    }
+
+    .title .name h2 {
+        font-size: 5rem;
+        font-weight: 600;
+    }
+
+    .title .portfolio h2 {
+        font-size: 7rem;
+        font-weight: 600;
+    }
+    
+    .title .name .first {
+        margin-left: 0;
+    }
+    
+    .title .name .last {
+        margin-left: 0px;
+    }
+    
+    .title .portfolio {
+        top: calc(10vh + 200px);
+        left: 5vw;
+    }
+
+    /* トップ画面のナビゲーション */
+    .top-navigation {
+        height: 50px;
+        display: block;
+        position: absolute;
+        left: 57.5vw;
+        bottom: calc(10vh);
+    }
+
+    .top-navigation nav {
+        height: 100%;
+    }
+
+    .top-navigation nav ul {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        align-items: flex-end;
+        gap: 2vw;
+    }
+
+    .top-navigation nav ul li {
+        font-family: "Poiret One", sans-serif;
+        font-size: 1.5rem;
+    }
+
+    .top-navigation nav ul li a {
+        text-decoration: none;
+        color: #fff;
+    }
+
 
 }
