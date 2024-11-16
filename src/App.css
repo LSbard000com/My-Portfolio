@@ -250,6 +250,18 @@
 }
 
 /* タイトルテキスト */
+.welcome {
+    width: 90%;
+    height: 90%;
+    font-family: "Poiret One", sans-serif;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 5vh;
+    left: 5vw;
+}
 .title .title-text {
     height: 6vh;
     margin: 0;
@@ -966,6 +978,10 @@
     }
 
     /* タイトルテキスト */
+    .welcome {
+        font-size: 2rem;
+    }
+
     .title .title-texts {
         width: 40%;
         height: 80%;
