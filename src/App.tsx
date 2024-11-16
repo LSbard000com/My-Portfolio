@@ -2,6 +2,7 @@ import './App.css'
 import About from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Header from './components/Header'
 import SideBar from './components/SideBar'
 import Skills from './components/Skills'
 import Top from './components/Top'
@@ -13,6 +14,7 @@ function App() {
   return (
     <>
       <SideBar />
+      <Header />
       <Top />
       <About />
       <Works />
