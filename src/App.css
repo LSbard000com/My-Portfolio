@@ -262,6 +262,11 @@
     top: 5vh;
     left: 5vw;
 }
+
+.welcome h1 {
+    text-align: center;
+}
+
 .title .title-text {
     height: 6vh;
     margin: 0;
@@ -471,17 +476,26 @@
     overflow: scroll;
 }
 
-.works .open .detail .work-title {
+.works .open .detail .detail-container {
     width: 100%;
-    margin: 20px auto;
-    text-align: center;
-    font-family: "Poiret One", sans-serif;
+    height: 100%;
+}
+
+.works .open .detail .image{
+    display: none;
 }
 
 /* 説明文 */
 .works .open .detail .explanation {
     width: 90%;
     margin-inline: auto;
+}
+
+.works .open .detail .work-title {
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+    font-family: "Poiret One", sans-serif;
 }
 
 .works .open .detail .explanation p {
@@ -982,6 +996,7 @@
         font-size: 4rem;
     }
 
+
     .title .title-texts {
         width: 40%;
         height: 80%;
@@ -1053,6 +1068,103 @@
         text-decoration: none;
         color: #fff;
     }
+
+
+    /* **************** 自己紹介画面 **************** */
+    .about .main .profile .photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about .main .profile .photo img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about .main .profile .info {
+        width: 500px;
+        margin: 30px auto;
+    }
+
+    .about .main .profile .info table th {
+        width: 200px;
+        font-size: 16px;
+    }
+    
+    .about .main .profile .info table td {
+        font-size: 16px;
+    }
+
+    .about .main .timeline {
+        max-width: 1000px;
+    }
+
+
+    /* **************** 制作物画面 **************** */
+    /* 個々の制作物レイアウト */
+    .works .items {
+        max-width: 1300px;
+        display: grid;
+        gap: 50px;
+        grid-template-areas: 
+            'itemA itemB itemC';
+    }
+
+    .works .items .item-list {
+        height: 20vw;
+    }
+    
+    
+    /* 作品サムネイル */
+    .works .items .work-item .thumbnail {
+        height: 16vw;
+        max-height: 225px;
+    }
+
+    .works .items .work-item .thumbnail img {
+        height: 15vw;
+        max-height: 225px;
+    }
+
+    .works .items .work-item .thumbnail img:hover {
+        height: 16vw;
+        max-height: 225px;
+    }
+
+    /* 作品タイトル */
+    .work-item .title {
+        margin: 20px 0;
+    }
+    /* 作品の詳細ページ */
+.works .open .detail {
+    width: 60%;
+    height: 70vh;
+    left: 20vw;
+}
+
+.works .open .detail .detail-container {
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    grid-template-areas: 
+        "itemA itemC"
+        "itemA itemD"
+        "itemB itemB";
+}
+
+/* 説明文 */
+.works .open .detail .explanation {
+    grid-area: itemB;
+}
+
+/* 使用技術 */
+.works .open .detail .skills {
+    grid-area: itemC;
+}
+
+/* url */
+.works .open .detail .url {
+    grid-area: itemD;
+}
 
 
 }

@@ -5,7 +5,15 @@ import { motion } from 'framer-motion'
 const top = () => {
 
     // 要素の表示を監視
-    const { ref, inView } = useInView()
+    const { ref, inView } = useInView({triggerOnce: true})
+
+    // ナビゲーションの要素
+    const navList = [
+        {name: 'About' ,id: '#about'},
+        {name: 'Works' ,id: '#works'},
+        {name: 'Skills' ,id: '#skills'},
+        {name: 'Contant' ,id: '#contact'},
+    ]
 
   return (
     <div id='top' className='top'>
@@ -62,10 +70,16 @@ const top = () => {
         <div className='top-navigation'>
             <nav>
                 <ul>
-                    <li><a href='#about'>About</a></li>
-                    <li><a href='#works'>Works</a></li>
-                    <li><a href='#skills'>Skills</a></li>
-                    <li><a href='#contact'>Contact</a></li>
+                    {navList.map((li,index) => (
+                        <motion.li
+                        initial={{opacity: 0, x: -50}}
+                        animate={inView ? { opacity: 1, x: 0 } : {}}
+                        transition={{ duration: 2 , delay: index / 4 + 6}}
+                        >
+                        <a href={li.id}>{li.name}</a>
+                        </motion.li>
+
+                    ))}
                 </ul>
             </nav>
         </div>
