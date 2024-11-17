@@ -16,9 +16,7 @@ const Skills: React.FC = () => {
             {/* チャート */}
             <div className='chart-area'>
                 <div className='chart'>
-                    <div>
-                        <RadarChart />
-                    </div>
+                    <RadarChart />
                 </div>
 
                 {/* チャートの説明欄 */}
