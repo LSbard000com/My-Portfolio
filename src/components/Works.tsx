@@ -12,7 +12,7 @@ type WorkItemProps = {
     explanation: string;
     url: URL;
     setDetail: () => void;
-    setWorkInfo: (title:string,skills:string[],explanation:string,url:URL) => void
+    setWorkInfo: (img:string, title:string,skills:string[],explanation:string,url:URL) => void
 }
 
 interface URL {
@@ -36,7 +36,7 @@ const WorksItem:React.FC<WorkItemProps> = (
         // サムネイルをクリック時にskillsとexplanationをセット
         const ClickSetWorkInformation = () => {
             setDetail()
-            setWorkInfo(title,skills,explanation,url)
+            setWorkInfo(img,title,skills,explanation,url)
         }
 
 
@@ -60,12 +60,14 @@ const Works = () => {
     }
 
     // クリック時に作品のタイトル、使用技術、説明文、urlをセットする関数
+    const [img, setImg] = useState<string>('')
     const [title, setTitle] = useState<string>('')
     const [skills, setSkill] = useState<string[]>([])
     const [explanation, setExplanation] = useState<string>('')
     const [url, setUrl] = useState<URL>({github:'', link:''})
 
-    const setWorkInfo = (title:string, skills:string[], explanation:string, url:URL) => {
+    const setWorkInfo = (img:string, title:string, skills:string[], explanation:string, url:URL) => {
+        setImg(img)
         setTitle(title)
         setSkill(skills)
         setExplanation(explanation)
@@ -129,7 +131,7 @@ const Works = () => {
 
                     {/* 作品サムネイル */}
                     <div className='image'>
-                        
+                        <img src={img} alt="作品サムネイル" />
                     </div>
 
                     {/* 作品の説明 */}
