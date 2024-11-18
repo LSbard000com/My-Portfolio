@@ -222,6 +222,48 @@
 
 
 
+/* **************** 最新のブログ画面 **************** */
+.blog {
+    width: 100%;
+}
+
+.blog .blog-area {
+    font-family: sans-serif;
+    color: #000;
+    width: 80%;
+    margin-inline: auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 10px #000;
+}
+
+.blog .blog-area ul {
+    width: 90%;
+    list-style: none;
+    margin: 30px auto;
+    padding: 20px 0;
+}
+
+
+.blog .blog-area ul li {
+    height: 40px;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    justify-content: left;
+    align-items: center;
+}
+
+.blog .blog-area ul li a {
+    color: #000;
+    width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+
 /* **************** トップ画面 **************** */
 .top {
     height: 100vh;
@@ -958,6 +1000,18 @@
 
     .section-text p {
         font-size: 20px;
+    }
+
+
+    /* **************** 最新のブログ画面 **************** */
+    .blog {
+        width: 100%;
+    }
+
+    .blog .blog-area {
+        width: 80%;
+        max-width: 1000px;
+        margin-inline: auto;
     }
 
 

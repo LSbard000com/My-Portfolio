@@ -75,6 +75,7 @@ const top = () => {
                         initial={{opacity: 0, x: -50}}
                         animate={inView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 2 , delay: index / 4 + 6}}
+                        key={index}
                         >
                         <a href={li.id}>{li.name}</a>
                         </motion.li>
