@@ -9,10 +9,11 @@ const top = () => {
 
     // ナビゲーションの要素
     const navList = [
-        {name: 'About' ,id: '#about'},
-        {name: 'Works' ,id: '#works'},
-        {name: 'Skills' ,id: '#skills'},
-        {name: 'Contant' ,id: '#contact'},
+        {name: 'Blog', id: '#blog'},
+        {name: 'About', id: '#about'},
+        {name: 'Works', id: '#works'},
+        {name: 'Skills', id: '#skills'},
+        {name: 'Contact', id: '#contact'},
     ]
 
   return (

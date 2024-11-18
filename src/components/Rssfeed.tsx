@@ -45,7 +45,7 @@ const Rssfeed = () => {
       };
 
     return (
-        <div className='blog'>
+        <div id='blog' className='blog'>
         <Title title='Blog' text='日々の学びの備忘録を残してありますので、ぜひご覧ください。'/>
             <div className='blog-area'>
                 <ul>

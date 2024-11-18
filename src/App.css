@@ -895,7 +895,7 @@
 
     /* ナビゲーションのタブ内 */
     .header .header-nav nav {
-        height: 0;
+        max-height: 0;
         background-color: #fff;
         opacity: 0;
         overflow: hidden;
@@ -903,13 +903,13 @@
     }
 
     .header .open-sec nav {
-        height: 300px;
+        max-height: 400px;
         opacity: 1;
         transition-duration: .5s;
     }
 
     .header .open-cont nav {
-        height: 200px;
+        max-height: 300px;
         opacity: 1;
         transition-duration: .5s;
     }
@@ -923,13 +923,13 @@
 
     .header .header-nav .section-items ul li {
         width: 100px;
-        margin: 35px auto 0;
+        margin: 35px auto ;
         text-align: center;
     }
 
     .header .header-nav .link-items ul li {
         width: 100px;
-        margin: 28px auto 0;
+        margin: 28px auto;
         text-align: center;
     }
 
@@ -1010,7 +1010,7 @@
 
     .blog .blog-area {
         width: 80%;
-        max-width: 1000px;
+        max-width: 800px;
         margin-inline: auto;
     }
 
