@@ -16,11 +16,10 @@ const Section:React.FC<SectionProps> = ({children, layoutType}) => {
         if(layoutType === 'right'){
             setLayout('row-reverse')
         }
-    },)
+    },[layoutType])
 
     const style = {
         minHeight: '100vh',
-        display: 'flex',
         flexDirection: layout,
     }
 
