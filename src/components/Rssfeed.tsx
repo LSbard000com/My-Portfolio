@@ -45,8 +45,13 @@ const Rssfeed = () => {
       };
 
     return (
+        <>
+        <Title 
+            title='Blog' 
+            text='日々の学びの備忘録を残してありますので、ぜひご覧ください。'
+            animationType='right'
+        />
         <div id='blog' className='blog'>
-        <Title title='Blog' text='日々の学びの備忘録を残してありますので、ぜひご覧ください。'/>
             <div className='blog-area'>
                 <ul>
                 {noteFeeds.map((article, index) => (
@@ -61,6 +66,7 @@ const Rssfeed = () => {
                 </ul>
             </div>
       </div>
+      </>
     )
 
 }

@@ -5,14 +5,16 @@ import Title from './Title';
 
 const Skills: React.FC = () => {
     return (
-        <div id='skills' className='my-skills'>
-
-            {/* タイトル */}
-            <Title 
+    <>
+        {/* タイトル */}
+        <Title 
                 title='Skills'
                 text='使用している技術を紹介します'
-                animationType='right'
-            />
+                animationType='left'
+        />
+        <div id='skills' className='my-skills'>
+
+            
 
             {/* チャート */}
             <div className='chart-area'>
@@ -49,6 +51,7 @@ const Skills: React.FC = () => {
                 </div> 
             </div>
         </div>
+    </>
     );
 };
 export default Skills

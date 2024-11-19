@@ -77,14 +77,13 @@ const Works = () => {
 
 
   return (
-    <div id='works' className="works">
-        {/* タイトル */}
-        <Title 
+    <>
+    <Title 
             title='Works'
             text='日々の学びを形に残した制作物をご覧ください'
             animationType='right'
-        />
-
+    />
+    <div id='works' className="works">
         {/* 個々の作品を表示 */}
         <div className='items'>
             <div className='item-list'>
@@ -180,6 +179,7 @@ const Works = () => {
             <div className='mask' onClick={detailOpenAndClose}></div>
         </div>
     </div>
+    </>
   )
 }
 

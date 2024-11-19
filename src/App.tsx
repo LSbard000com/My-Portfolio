@@ -18,10 +18,21 @@ function App() {
       <SideBar />
       <Header />
       <Top />
-      <About />
-      <Works />
-      <Skills />
-      <Contact />
+      <Section layoutType='right'>
+        <Rssfeed />
+      </Section>
+      <Section layoutType='left'>
+        <About />
+      </Section>
+      <Section layoutType='right'>
+        <Works />
+      </Section>
+      <Section layoutType='left'>
+        <Skills />
+      </Section>
+      <Section layoutType='right'>
+        <Contact />
+      </Section>
       <Footer />
     </>
   )
