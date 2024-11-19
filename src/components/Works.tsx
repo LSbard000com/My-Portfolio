@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import matrixCalculation from '../assets/img/行列計算.png'
 import mathQuestionBox from '../assets/img/みんなの数学質問箱.png'
+import myPortfolio from '../assets/img/ポートフォリオサイト.png'
 import Title from './Title';
 
 
@@ -11,7 +12,7 @@ type WorkItemProps = {
     explanation: string;
     url: URL;
     setDetail: () => void;
-    setWorkInfo: (title:string,skills:string[],explanation:string,url:URL) => void
+    setWorkInfo: (img:string, title:string,skills:string[],explanation:string,url:URL) => void
 }
 
 interface URL {
@@ -35,7 +36,7 @@ const WorksItem:React.FC<WorkItemProps> = (
         // サムネイルをクリック時にskillsとexplanationをセット
         const ClickSetWorkInformation = () => {
             setDetail()
-            setWorkInfo(title,skills,explanation,url)
+            setWorkInfo(img,title,skills,explanation,url)
         }
 
 
@@ -59,12 +60,14 @@ const Works = () => {
     }
 
     // クリック時に作品のタイトル、使用技術、説明文、urlをセットする関数
+    const [img, setImg] = useState<string>('')
     const [title, setTitle] = useState<string>('')
     const [skills, setSkill] = useState<string[]>([])
     const [explanation, setExplanation] = useState<string>('')
     const [url, setUrl] = useState<URL>({github:'', link:''})
 
-    const setWorkInfo = (title:string, skills:string[], explanation:string, url:URL) => {
+    const setWorkInfo = (img:string, title:string, skills:string[], explanation:string, url:URL) => {
+        setImg(img)
         setTitle(title)
         setSkill(skills)
         setExplanation(explanation)
@@ -108,46 +111,65 @@ const Works = () => {
                 />
             </div>
 
+            <div className='item-list'>
+                <WorksItem 
+                    img={myPortfolio}
+                    title='ポートフォリオサイト'
+                    skills={['HTML','CSS','TypeScript','React','Intersection Observer','Framer Motion','react-vertical-timeline-component','Chart.js','Vite','Git','GitHub',' Netlify']}
+                    explanation='自分のポートフォリオサイトです。Intersection ObserverとFramer Motionを用いたアニメーションをつけたり、レスポンシブデザインを考えたりとUIを意識して開発しました。また、Viteを用いて実行環境を構築してみました。デスクトップとモバイル画面、両方でご覧いただけると幸いです。'
+                    url={{github: 'https://github.com/LSbard000com/My-Portfolio', link:'https://masatokomukai.netlify.app/'}}
+                    setDetail={detailOpenAndClose}
+                    setWorkInfo={setWorkInfo}
+                />
+            </div>
+
         </div>
 
         {/* 作品の詳細画面 */}
         <div className={isDetail ? 'open' : 'close'}>
             <div className='detail'>
+                <div className='detail-container'>
 
-                {/* 作品の説明 */}
-                <div className='explanation'>
-                    <div className='work-title'>- {title} -</div>
-                    <p>{explanation}</p>
-                </div>
+                    {/* 作品サムネイル */}
+                    <div className='image'>
+                        <img src={img} alt="作品サムネイル" />
+                    </div>
 
-                {/* 使用技術 */}
-                <div className='skills'>
-                    <div className='work-title'>- 使用した技術など -</div>
-                    <ul>
-                        {skills.map((skill) => (
-                            <li key={skill}>{skill}</li>
-                        ))}
-                    </ul>
-                </div>
+                    {/* 作品の説明 */}
+                    <div className='explanation'>
+                        <div className='work-title'>- {title} -</div>
+                        <p>{explanation}</p>
+                    </div>
 
-                {/* 作品に関係するURL */}
-                <div className='url'>
-                    {url.github ? 
-                        <div className='url-item'>
-                            <a href={url.github}><i className="fa-brands fa-github"></i></a>
-                        </div>
-                    :
-                        <></>
-                    }
-                    {url.link ? 
-                        <div className='url-item'>
-                            <a href={url.link}><i className="fa-solid fa-link"></i></a>
-                        </div>
-                    :
-                        <></>
-                    }
-                    
-                </div>
+                    {/* 使用技術 */}
+                    <div className='skills'>
+                        <div className='work-title'>- 使用した技術など -</div>
+                        <ul>
+                            {skills.map((skill) => (
+                                <li key={skill}>{skill}</li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* 作品に関係するURL */}
+                    <div className='url'>
+                        {url.github ? 
+                            <div className='url-item'>
+                                <a href={url.github}><i className="fa-brands fa-github"></i></a>
+                            </div>
+                        :
+                            <></>
+                        }
+                        {url.link ? 
+                            <div className='url-item'>
+                                <a href={url.link}><i className="fa-solid fa-link"></i></a>
+                            </div>
+                        :
+                            <></>
+                        }
+                        
+                    </div>
+                </div>         
 
                 {/* 閉じるボタン */}
                 <div className='close-btn' onClick={detailOpenAndClose}>
