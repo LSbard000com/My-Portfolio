@@ -9,6 +9,7 @@ const Contact = () => {
         <Title 
             title='Contact'
             text='下記のリンクより気軽にお問い合わせください'
+            animationType='left'
         />
 
         {/* 自己紹介画像 */}

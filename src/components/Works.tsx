@@ -79,6 +79,7 @@ const Works = () => {
         <Title 
             title='Works'
             text='日々の学びを形に残した制作物をご覧ください'
+            animationType='right'
         />
 
         {/* 個々の作品を表示 */}

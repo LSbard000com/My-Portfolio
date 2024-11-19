@@ -8,6 +8,7 @@ const About = () => {
       <Title 
         title='About'
         text='はじめましてどうぞごゆくっりご覧ください'
+        animationType='left'
        />
       <div className='main'>
         <div className='profile'>

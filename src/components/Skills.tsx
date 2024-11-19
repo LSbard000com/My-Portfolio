@@ -11,6 +11,7 @@ const Skills: React.FC = () => {
             <Title 
                 title='Skills'
                 text='使用している技術を紹介します'
+                animationType='right'
             />
 
             {/* チャート */}
