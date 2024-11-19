@@ -8,10 +8,18 @@
     display: none;
 }
 
+.section {
+    width: 100vw;
+}
+
 
 
 /* **************** セクションタイトル **************** */
-.section-title {
+.section-title{
+    background: linear-gradient(to right, var(--navy), var(--blue));
+}
+
+.section-title .title {
     width: 100%;
     height: 200px;
     display: flex;
@@ -269,6 +277,7 @@
     height: 100vh;
     width: 100vw;
     min-width: 300px;
+    background: linear-gradient(to right, var(--navy), var(--blue));
 }
 
 .top .title {
@@ -987,15 +996,29 @@
         font-size: 20px;
     }
 
+     /* **************** セクション **************** */
+    .section {
+        display: flex;
+    }
+
+
+
+
 
     /* **************** セクションタイトル **************** */
     .section-title {
-        height: 300px;
+        width: 50vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+        top: 0;
     }
 
-    .section-title h2 {
+    .section-title .title h2 {
         height: 100px;
-        font-size: 70px;
+        font-size: 9rem;
     }
 
     .section-text p {
@@ -1005,7 +1028,8 @@
 
     /* **************** 最新のブログ画面 **************** */
     .blog {
-        width: 100%;
+        width: 50vw;
+        margin: 100vh 0;
     }
 
     .blog .blog-area {
@@ -1114,6 +1138,11 @@
 
 
     /* **************** 自己紹介画面 **************** */
+    .about {
+        width: 50vw;
+        margin: 100vh 0;
+    }
+
     .about .main .profile .photo {
         width: 150px;
         height: 150px;
@@ -1145,6 +1174,11 @@
 
     /* **************** 制作物画面 **************** */
     /* 個々の制作物レイアウト */
+    .works {
+        width: 50vw;
+        margin: 100vh 0;
+    }
+
     .works .items {
         max-width: 1300px;
         display: grid;
@@ -1234,6 +1268,11 @@
 
 
     /* **************** 技術紹介画面 **************** */
+    .my-skills {
+        width: 50vw;
+        margin: 100vh 0;
+    }
+
     .my-skills .chart-area {
         width: 60%;
         display: flex;
@@ -1251,5 +1290,11 @@
     .my-skills .chart-area .chart-explanation {
         width: 20vw;
         height: 200px;
+    }
+
+    /* **************** お問い合わせ画面 **************** */
+    .contact {
+        width: 50vw;
+        margin: 100vh 0;
     }
 }
