@@ -2,6 +2,7 @@ import './App.css'
 import About from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Section from './components/Section'
 import SideBar from './components/SideBar'
 import Skills from './components/Skills'
 import Top from './components/Top'
@@ -14,7 +15,9 @@ function App() {
     <>
       <SideBar />
       <Top />
-      <About />
+      <Section layoutType='left'>
+        <About />
+      </Section >
       <Works />
       <Skills />
       <Contact />

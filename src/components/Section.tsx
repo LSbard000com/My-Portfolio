@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 
 type SectionProps = {
-    childprop: React.ReactNode
+    children: React.ReactNode
     layoutType: 'left' | 'right'
 }
 
 type LayoutType = 'row' | 'column' | 'row-reverse' | 'column-reverse';
 
-const Section:React.FC<SectionProps> = ({childprop, layoutType}) => {
+const Section:React.FC<SectionProps> = ({children, layoutType}) => {
     const [layout, setLayout] = useState<LayoutType>('row')
     useEffect(() => {
         if(layoutType === 'left'){
@@ -16,7 +16,7 @@ const Section:React.FC<SectionProps> = ({childprop, layoutType}) => {
         if(layoutType === 'right'){
             setLayout('row-reverse')
         }
-    },[])
+    },)
 
     const style = {
         minHeight: '100vh',
@@ -27,7 +27,7 @@ const Section:React.FC<SectionProps> = ({childprop, layoutType}) => {
 
   return (
     <div className="section" style={style}>
-      {childprop}
+      {children}
     </div>
   )
 }
