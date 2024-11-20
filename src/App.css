@@ -1,6 +1,6 @@
 :root{
-    --navy: #193278;
-    --blue: #005070;
+    --navy: #6b8e23;
+    --blue: #556b2f;
 }
 
 /* **************** ヘッダー **************** */
@@ -273,8 +273,8 @@
 .top {
     height: 100vh;
     width: 100vw;
-    min-width: 300px;
-    background: linear-gradient(to top, var(--navy), var(--blue));
+    background: var(--navy);
+    background-size: 100% 300%;
 }
 
 .top .title {
@@ -303,6 +303,7 @@
     height: 90%;
     font-family: "Poiret One", sans-serif;
     font-size: 2rem;
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;

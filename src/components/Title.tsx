@@ -29,7 +29,7 @@ const Title:React.FC<TitleProps> = ({title, text, animationType}) => {
     <motion.div 
       className='section-title'
       initial={{backgroundColor: '#ffffff'}} 
-      animate={inView ? {backgroundColor: '#193278'} : {}}
+      animate={inView ? {backgroundColor: '#6b8e23'} : {}}
       transition={{duration: 2}}
     >
       <div className='sticky'>
