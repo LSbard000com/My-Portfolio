@@ -28,9 +28,9 @@ const Title:React.FC<TitleProps> = ({title, text, animationType}) => {
   return (
     <motion.div 
       className='section-title'
-      initial={{backgroundColor: '#ffffff'}} 
-      animate={inView ? {backgroundColor: '#6b8e23'} : {}}
-      transition={{duration: 2}}
+      initial={{ opacity: 0 }} 
+      animate={inView ? { opacity: 1 } : {}}
+      transition={{duration: 4}}
     >
       <div className='sticky'>
         <div className="title" ref={ref}>

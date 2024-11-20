@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios'; // フェッチ用
 import { XMLParser } from 'fast-xml-parser';
-import Title from './Title';
+import { motion } from 'framer-motion'
 
 interface NoteItem {
     title: string
@@ -48,7 +48,7 @@ const Rssfeed = () => {
         <>
         <div id='blog' className='blog'>
             <div className='new-posts'>
-                <h2>New Posts</h2>
+                <h2>New Posts!</h2>
             </div>
             <div className='blog-area'>
                 <ul>

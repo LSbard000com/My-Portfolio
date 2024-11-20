@@ -20,13 +20,21 @@ const top = () => {
   return (
     <div id='top' className='top'>
         <div className='title' ref={ref}>
+            <motion.div 
+            className='Masato-Komukai'
+            initial={{ opacity: 0}}
+            animate={{ opacity: 1}}
+            transition={{duration: 1, delay: 7}}
+            >
+            Masato Komukai Portfolio
+            </motion.div>
 
             {/* タイトル画像 */}
             <motion.img 
                 src={topImage} 
                 alt='top image'
-                initial={{opacity: 0, boxShadow: '0px 0px 0px #aaa'}}
-                animate={inView ? { opacity: 1, boxShadow: '0px 0px 20px #aaa'} : {}}
+                initial={{opacity: 0 }}
+                animate={inView ? { opacity: 1 } : {}}
                 transition={{ duration: 5, delay: 6 }}
             />
 
@@ -40,7 +48,7 @@ const top = () => {
                 <h1>Welcome to</h1>
             </motion.div>
             <div className='title-texts'>
-                <div className='title-text name'>
+                <div className='title-text'>
                     <motion.h2 
                         className='first'
                         initial={{opacity: 0, x: -50}}
@@ -57,9 +65,8 @@ const top = () => {
                     >
                         Komukai
                     </motion.h2>
-                </div>
-                <div className='title-text portfolio'>
                     <motion.h2
+                        className='portfolio'
                         initial={{opacity: 0, x: -50}}
                         animate={inView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 2 , delay: 4}}
