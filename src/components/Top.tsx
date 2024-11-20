@@ -1,6 +1,7 @@
 import topImage from '../assets/img/IMG_7005.jpeg'
 import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
+import Rssfeed from './Rssfeed'
 
 const top = () => {
 
@@ -68,6 +69,17 @@ const top = () => {
                 </div>
             </div>
         </div>
+
+        {/* ブログの新着情報 */}
+        <motion.div 
+            className='rss-feed'
+            initial={{ opacity: 0}}
+            animate={{ opacity: 1}}
+            transition={{duration: 1, delay: 7}}
+        >
+            <Rssfeed />
+        </motion.div>
+
         <div className='top-navigation'>
             <nav>
                 <ul>

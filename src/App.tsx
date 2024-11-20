@@ -4,7 +4,6 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Section from './components/Section'
 import Header from './components/Header'
-import Rssfeed from './components/Rssfeed'
 import SideBar from './components/SideBar'
 import Skills from './components/Skills'
 import Top from './components/Top'
@@ -18,9 +17,6 @@ function App() {
       <SideBar />
       <Header />
       <Top />
-      <Section layoutType='right'>
-        <Rssfeed />
-      </Section>
       <Section layoutType='left'>
         <About />
       </Section>

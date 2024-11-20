@@ -22,7 +22,7 @@ const Rssfeed = () => {
             const response = await axios.get<string>(rssFeedURL, { responseType : 'text'});
             const parser = new XMLParser();
             const parseData = parser.parse(response.data)
-            const items = parseData.rss.channel.item.slice(0,5)
+            const items = parseData.rss.channel.item.slice(0,3)
             setNoteFeeds(items as NoteItem[])
         } catch(error:unknown) {
             if(error){
@@ -46,12 +46,10 @@ const Rssfeed = () => {
 
     return (
         <>
-        <Title 
-            title='Blog' 
-            text='日々の学びの備忘録を残してありますので、ぜひご覧ください。'
-            animationType='right'
-        />
         <div id='blog' className='blog'>
+            <div className='new-posts'>
+                <h2>New Posts</h2>
+            </div>
             <div className='blog-area'>
                 <ul>
                 {noteFeeds.map((article, index) => (
