@@ -26,7 +26,12 @@ const Title:React.FC<TitleProps> = ({title, text, animationType}) => {
   },[animationType])
 
   return (
-    <div className='section-title'>
+    <motion.div 
+      className='section-title'
+      initial={{backgroundColor: '#ffffff'}} 
+      animate={inView ? {backgroundColor: '#193278'} : {}}
+      transition={{duration: 2}}
+    >
       <div className='sticky'>
         <div className="title" ref={ref}>
             <motion.h2
@@ -45,7 +50,7 @@ const Title:React.FC<TitleProps> = ({title, text, animationType}) => {
             >{text}</motion.p>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
