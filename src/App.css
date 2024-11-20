@@ -227,6 +227,91 @@
 
 
 
+/* **************** トップ画面 **************** */
+.top {
+    height: 100vh;
+    width: 100vw;
+    background: var(--navy);
+    background-size: 100% 300%;
+}
+
+.top .title {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+/* 背景画像 */
+.top .title img {
+    display: block;
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    object-position: left top;
+    position: absolute;
+    top: 50vh;
+}
+
+/* タイトルテキスト */
+.welcome {
+    width: 90%;
+    height: 90%;
+    font-family: "Poiret One", sans-serif;
+    font-size: 2rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 5vh;
+    left: 5vw;
+}
+
+.welcome h1 {
+    text-align: center;
+}
+
+.title .title-text {
+    margin: 0;
+}
+
+.title .name h2 {
+    margin: 0;
+    font-family: "Poiret One", sans-serif;
+    font-size: 4rem;
+    font-weight: 100;
+    color: #fff;
+    z-index: 10;
+}
+
+.title .portfolio h2 {
+    margin: 0;
+    font-family: "Poiret One", sans-serif;
+    font-size: 5rem;
+    font-weight: 100;
+    color: #fff;
+    z-index: 10;
+}
+
+.title .name {
+    position: absolute;
+    top: 7vh;
+    left: 5vw;
+}
+
+.title .portfolio {
+    position: absolute;
+    top: 25vh;
+    left: 5vw;
+}
+
+/* トップ画面のナビゲーション */
+.top-navigation {
+    display: none;
+}
+
+
+
 /* **************** 最新のブログ画面 **************** */
 .blog {
     width: 100%;
@@ -268,101 +353,6 @@
     text-overflow: ellipsis; 
 }
 
-
-/* **************** トップ画面 **************** */
-.top {
-    height: 100vh;
-    width: 100vw;
-    background: var(--navy);
-    background-size: 100% 300%;
-}
-
-.top .title {
-    height: 100%;
-    width: 90%;
-    margin-inline: auto;
-    position: relative;
-}
-
-/* 背景画像 */
-.top .title img {
-    display: block;
-    width: 80%;
-    height: 80%;
-    object-fit: cover;
-    object-position: left top;
-    position: absolute;
-    top: calc(100vh / 10);
-    left: calc(100vw / 10);
-    box-shadow: 0px 0px 20px #aaa;
-}
-
-/* タイトルテキスト */
-.welcome {
-    width: 90%;
-    height: 90%;
-    font-family: "Poiret One", sans-serif;
-    font-size: 2rem;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 5vh;
-    left: 5vw;
-}
-
-.welcome h1 {
-    text-align: center;
-}
-
-.title .title-text {
-    height: 6vh;
-    margin: 0;
-}
-
-.title .name h2 {
-    margin: 0;
-    font-family: "Poiret One", sans-serif;
-    font-size: 4rem;
-    font-weight: 100;
-    color: #fff;
-    z-index: 10;
-}
-
-.title .portfolio h2 {
-    margin: 0;
-    font-family: "Poiret One", sans-serif;
-    font-size: 5rem;
-    font-weight: 100;
-    color: #fff;
-    z-index: 10;
-}
-
-.title .name {
-    position: absolute;
-    top: 20vh;
-    left: 10vw;
-}
-
-.title .name .first {
-    margin-left: 0;
-}
-
-.title .name .last {
-    margin-left: 20px;
-}
-
-.title .portfolio {
-    position: absolute;
-    top: 60vh;
-    right: 2vw;
-}
-
-/* トップ画面のナビゲーション */
-.top-navigation {
-    display: none;
-}
 
 
 
