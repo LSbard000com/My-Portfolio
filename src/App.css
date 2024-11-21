@@ -1,93 +1,53 @@
 :root{
-    --navy: #193278;
-    --blue: #005070;
+    --navy: #6b8e23;
+    --blue: #556b2f;
+}
+
+/* **************** ヘッダー **************** */
+.header {
+    display: none;
+}
+
+.section {
+    width: 100vw;
 }
 
 
 
-/* **************** 共通事項 **************** */
-.section-title {
+/* **************** セクションタイトル **************** */
+.section-title .title {
     width: 100%;
-    height: 200px;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .section-title h2 {
     height: 50px;
     font-family: "Poiret One", sans-serif;
-    font-size: 40px;
-}
-
-
-
-/* **************** トップ画面 **************** */
-.top {
-    height: 100vh;
-    width: 100vw;
-    min-width: 300px;
-}
-
-.top .title {
-    height: 100%;
-    width: 90%;
-    margin-inline: auto;
-    position: relative;
-}
-
-/* 背景画像 */
-.top .title img {
-    display: block;
-    width: 80%;
-    height: 80%;
-    object-fit: cover;
-    object-position: left top;
-    position: absolute;
-    top: calc(100vh / 10);
-    left: calc(100vw / 10);
-    box-shadow: 0px 0px 20px #aaa;
-}
-
-/* タイトルテキスト */
-.title .title-text {
-    width: 200px;
-    height: 6vh;
-    margin: 0;
-}
-
-.title .title-text h2 {
-    margin: 0;
-    font-family: "Poiret One", sans-serif;
     font-size: 50px;
-    font-weight: 100;
-    z-index: 10;
+    color: #fff;
 }
 
-.title .name {
-    position: absolute;
-    top: 20vh;
-    left: 10vw;
+.section-text {
+    width: 100%;
+    min-height: 50px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.title .name .first {
-    margin-left: 10px;
-}
-
-.title .name .last {
-    margin-left: 50px;
-}
-
-.title .portfolio {
-    position: absolute;
-    top: 60vh;
-    right: 1vw;
+.section-text p {
+    width: 60%;
+    text-align: center;
+    margin: 0;
+    color: #fff;
 }
 
 
-
-/* トグルボタン */
-.top .nav-btn {
+/* **************** サイドバー **************** */
+.sidebar .nav-btn {
     width: 50px;
     height: 50px;
     position: fixed;
@@ -95,11 +55,10 @@
     right: 20px;
     border-radius: 2px;;
     z-index: 60;
-    position: fixed;
     transition-duration: .5s;
 }
 
-.top .nav-btn span {
+.sidebar .nav-btn span {
     display: block;
     width: 80%;
     height: 10px;
@@ -108,17 +67,17 @@
     left: calc(50px * 0.1);
 }
 
-.top .nav-btn span:nth-child(1) {
+.sidebar .nav-btn span:nth-child(1) {
     top: calc(50px * 0.1);
     transition-duration: .5s;
 }
 
-.top .nav-btn span:nth-child(2) {
+.sidebar .nav-btn span:nth-child(2) {
     top: calc(50px * 0.5 - 5px);
     transition-duration: .5s;
 }
 
-.top .nav-btn span:nth-child(3) {
+.sidebar .nav-btn span:nth-child(3) {
     bottom: calc(50px * 0.1);
     transition-duration: .5s;
 }
@@ -158,6 +117,253 @@
     opacity: 1;
 }
 
+.navigation .nav {
+    width: 100%;
+    height: 60%;
+    margin: 10vh 0 0;
+}
+
+.navigation .nav ul {
+    width: 60%;
+    height: 100%;
+    margin-inline: auto;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation .nav ul li {
+    height: 15%;
+    width: 100%;
+    margin-bottom: 5%;
+    line-height: 60px;
+    font-family: "Poiret One", sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.navigation .nav ul li a {
+    text-decoration: none;
+    color: #000;
+    position: relative;
+}
+
+.navigation .nav ul li a::after {
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #000000;
+    bottom: -5px; /*アンダーラインが現れ始める位置（aタグの下辺からの高さ）*/
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    }
+    
+.navigation .nav ul li a:hover::after {
+    visibility: visible;
+    bottom: 1px;
+    opacity: 1;
+}
+
+/* 各種リンク */
+.navigation .links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation .links ul {
+    width: 60%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation .links ul li {
+    width: 150px;
+    margin-inline: auto;
+    height: 50px;
+    font-family: "Poiret One", sans-serif;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.navigation .links ul li a {
+    color: #000;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.navigation .links ul li i {
+    height: 50px;
+    line-height: 50px;
+    color: #000;
+    font-size: 30px;
+}
+
+.navigation .links ul li a::after {
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #000000;
+    bottom: -5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.navigation .links ul li a:hover::after {
+    visibility: visible;
+    bottom: 1px;
+    opacity: 1;
+}
+
+
+
+/* **************** 最新のブログ画面 **************** */
+.blog {
+    width: 100%;
+}
+
+.blog .blog-area {
+    font-family: sans-serif;
+    color: #000;
+    width: 80%;
+    margin-inline: auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 10px #000;
+}
+
+.blog .blog-area ul {
+    width: 90%;
+    list-style: none;
+    margin: 30px auto;
+    padding: 20px 0;
+}
+
+
+.blog .blog-area ul li {
+    height: 40px;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    justify-content: left;
+    align-items: center;
+}
+
+.blog .blog-area ul li a {
+    color: #000;
+    width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+
+/* **************** トップ画面 **************** */
+.top {
+    height: 100vh;
+    width: 100vw;
+    background: var(--navy);
+    background-size: 100% 300%;
+}
+
+.top .title {
+    height: 100%;
+    width: 90%;
+    margin-inline: auto;
+    position: relative;
+}
+
+/* 背景画像 */
+.top .title img {
+    display: block;
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    object-position: left top;
+    position: absolute;
+    top: calc(100vh / 10);
+    left: calc(100vw / 10);
+    box-shadow: 0px 0px 20px #aaa;
+}
+
+/* タイトルテキスト */
+.welcome {
+    width: 90%;
+    height: 90%;
+    font-family: "Poiret One", sans-serif;
+    font-size: 2rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 5vh;
+    left: 5vw;
+}
+
+.welcome h1 {
+    text-align: center;
+}
+
+.title .title-text {
+    height: 6vh;
+    margin: 0;
+}
+
+.title .name h2 {
+    margin: 0;
+    font-family: "Poiret One", sans-serif;
+    font-size: 4rem;
+    font-weight: 100;
+    color: #fff;
+    z-index: 10;
+}
+
+.title .portfolio h2 {
+    margin: 0;
+    font-family: "Poiret One", sans-serif;
+    font-size: 5rem;
+    font-weight: 100;
+    color: #fff;
+    z-index: 10;
+}
+
+.title .name {
+    position: absolute;
+    top: 20vh;
+    left: 10vw;
+}
+
+.title .name .first {
+    margin-left: 0;
+}
+
+.title .name .last {
+    margin-left: 20px;
+}
+
+.title .portfolio {
+    position: absolute;
+    top: 60vh;
+    right: 2vw;
+}
+
+/* トップ画面のナビゲーション */
+.top-navigation {
+    display: none;
+}
+
 
 
 /* **************** 自己紹介画面 **************** */
@@ -171,35 +377,75 @@
     position: relative;
 }
 
-/* 挿入画像 */
-.about .main .img {
-    width: 60%;
-    margin-left: calc(100vw * 0.15);
-}
-
-.about .main .img img {
+/* プロフィール */
+.about .main .profile {
     width: 100%;
-    object-fit: contain;
+    margin: 40px 0;
 }
 
-/* 自己紹介文 */
-.about .main .text-area {
-    width: 80%;
-    min-height: 200px;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(2px);
-    position: absolute;
-    top: 50px;
-    right: 10vw;
+.about .main .profile .photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    margin: 20px auto;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.about .main .text-area .text {
-    width: 90%;
-    height: 90%;
+.about .main .profile .photo img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    transform: scale(1.5); 
+    transform-origin: 3px 0px;
+}
+
+/* 情報 */
+.about .main .profile .info {
+    width: 300px;
+    margin: 10px auto;
+}
+
+.about .main .profile .info table {
+    width: 100%;
+    margin-inline: auto;
+}
+
+.about .main .profile .info table th {
+    text-align: right;
+    font-weight: 100;
+    font-size: 14px;
+}
+
+.about .main .profile .info table td {
+    font-size: 14px;
+}
+
+/* タイムライン */
+.about .main .timeline {
+    width: 70%;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0px 0px 20px #aaa;
+}
+
+.about .main .timeline .vertical-timeline-element {
+    margin-bottom: 5vh;
+}
+
+.about .main .timeline h2{
+    margin: 0 0 20px 0;
+    font-family: "Poiret One", sans-serif;
+    color: #fff;
+}
+
+.about .main .timeline p {
+    font-size: 16px;
 }
 
 
@@ -217,12 +463,11 @@
 
 .works .items .item-list {
     width: 100%;
-    height: 50vh;
+    height: 60vw;
 }
 
 .works .items .work-item {
     width: 100%;
-    height: 500px;
 }
 
 /* 作品サムネイル */
@@ -281,17 +526,27 @@
     overflow: scroll;
 }
 
-.works .open .detail .work-title {
+.works .open .detail .detail-container {
     width: 100%;
-    margin: 20px auto;
-    text-align: center;
-    font-family: "Poiret One", sans-serif;
+    height: 100%;
+}
+
+/* 作品サムネイル */
+.works .open .detail .image{
+    display: none;
 }
 
 /* 説明文 */
 .works .open .detail .explanation {
     width: 90%;
     margin-inline: auto;
+}
+
+.works .open .detail .work-title {
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+    font-family: "Poiret One", sans-serif;
 }
 
 .works .open .detail .explanation p {
@@ -315,7 +570,7 @@
 }
 
 .works .open .detail .skills ul li {
-    height: 30px;
+    min-height: 30px;
     line-height: 30px;
     padding: 0 10px;
     border-radius: 5px;
@@ -386,4 +641,659 @@
 }
 .works .open .close-btn span:nth-child(2) {
     transform: rotate(-45deg);
+}
+
+
+/* **************** 技術紹介画面 **************** */
+.my-skills {
+    width: 100%;
+    margin: 50px auto;
+}
+
+/* チャート */
+.my-skills .chart-area {
+    width: 100%;
+    margin-inline: auto;
+    position: relative;
+}
+
+.my-skills .chart-area .chart {
+    width: 80vw;
+    height: 80vw;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* チャートの説明欄 */
+.my-skills .chart-area .chart-explanation {
+    width: 100%;
+    height: 200px;
+}
+
+.chart-explanation table {
+    width: 200px;
+    margin: 20px auto;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 10px #aaa;
+}
+
+
+
+/* **************** お問い合わせ画面 **************** */
+.contact {
+    width: 100%;
+}
+
+/* 自己紹介画像 */
+.contact .plofile-img {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .plofile-img .img-area{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+
+.contact .plofile-img .img-area img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    transform: scale(1.3);
+    transform-origin: 0px 0px;
+}
+
+/* 各種コンテンツ */
+.contact .contents {
+    width: 100%;
+    height: 150px;
+}
+
+.contact .contents ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contact .contents ul li {
+    width: 60px;
+    height: 100px;
+}
+
+
+.contact .contents ul li a {
+    color: #fff;
+    font-size: 40px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+.contact .contents ul li span {
+    font-family: "Poiret One", sans-serif;
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    text-align: center;
+}
+
+
+
+/* **************** フッター画面 **************** */
+.footer {
+    width: 100%;
+    height: 10vh;
+    background-color: #fff;
+}
+
+.footer .copyright {
+    color: #000;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ジャンプボタン */
+/* open */
+.footer .open .jump-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: #fff;
+    position: fixed;
+    right: 20px;
+    bottom: calc(10vh - 30px);
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: .5s;
+}
+
+.footer .jump-btn a {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: var(--navy);
+}
+
+.footer .jump-btn a span {
+    width: 25px;
+    height: 5px;
+    background-color: #fff;
+    position: absolute;
+    top: 25px;
+}
+
+.footer .jump-btn a span:nth-child(1) {
+    transform: rotate(-45deg);
+    left: 10.4px;
+}
+
+.footer .jump-btn a span:nth-child(2) {
+    transform: rotate(45deg);
+    right: 10.4px;
+}
+
+/* close */
+.footer .close .jump-btn {
+    position: fixed;
+    right: 20px;
+    bottom: -20vh;
+    opacity: 0;
+}
+
+
+/* ********************************************** PC画面 ********************************************** */
+@media (min-width: 1000px) {
+    /* **************** サイドバー非表示 **************** */
+    .sidebar .nav-btn {
+        display: none;
+    }
+
+    /* **************** ヘッダー **************** */
+    .header {
+        width: 100%;
+        display: block;
+        position: fixed;
+        top: 0;
+        z-index: 50;
+    }
+
+    .header-area {
+        display: flex;
+        justify-content: space-between;
+        font-family: "Poiret One", sans-serif;
+    }
+
+    .header .open {
+        width: 100%;
+        height: 60px;
+        background-color: rgba(255, 255, 255, 0.9);
+        transition-duration: .5s;
+    }
+
+    .header .close {
+        height: 0px;
+        opacity: 0;
+        overflow: hidden;
+        transition-duration: .5s;
+    }
+
+    /* タイトル */
+    .header .title {
+        width: 400px;
+        height: 100%;
+        margin-inline: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header .title a {
+        text-decoration: none;
+    }
+
+    .header .title a .title-h {
+        margin: 0;
+        line-height: 60px;
+        color: #000;
+    }
+
+    /* ヘッダーナビゲーション*/
+    .header .header-navigation {
+        display: flex;
+        margin-right: 50px;
+    }
+
+
+    .header .header-nav {
+        width: 200px;
+        opacity: 0.9;
+        cursor: pointer;
+    }
+
+    /* ナビゲーションタイトル */
+    .header .header-nav h2 {
+        height: 60px;
+        line-height: 67px;
+        margin: 0;
+        text-align: center;
+        color: #000;
+    }
+
+    /* ナビゲーションのタブ内 */
+    .header .header-nav nav {
+        max-height: 0;
+        background-color: #fff;
+        opacity: 0;
+        overflow: hidden;
+        transition-duration: .5s;
+    }
+
+    .header .open-sec nav {
+        max-height: 400px;
+        opacity: 1;
+        transition-duration: .5s;
+    }
+
+    .header .open-cont nav {
+        max-height: 300px;
+        opacity: 1;
+        transition-duration: .5s;
+    }
+
+    .header .header-nav nav ul {
+        width: 100%;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .header .header-nav .section-items ul li {
+        width: 100px;
+        margin: 35px auto ;
+        text-align: center;
+    }
+
+    .header .header-nav .link-items ul li {
+        width: 100px;
+        margin: 28px auto;
+        text-align: center;
+    }
+
+    .header .header-nav nav ul li a {
+        text-decoration: none;
+        color: #000;
+        font-size: 24px;
+        position: relative;
+    }
+
+    .header .header-nav nav ul li a::after {
+        position: absolute;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background: #000000;
+        bottom: -3px; 
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
+    }
+
+    .header .header-nav nav ul li a:hover::after {
+        visibility: visible;
+        bottom: 0px;
+        opacity: 1;
+    }
+
+    .header .links {
+        width: 200px;
+    }
+
+    .header .links .link-items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header .links .link-items ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        gap: 40px;
+    }
+
+    .header .links .link-items ul li {
+        margin-top: 4px;
+        font-size: 25px;
+    }
+
+    .header .header-nav nav ul li a i{
+        color: #000;
+        font-size: 20px;
+    }
+
+     /* **************** セクション **************** */
+    .section {
+        display: flex;
+    }
+
+
+
+
+
+    /* **************** セクションタイトル **************** */
+    .section-title {
+        width: 50vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+        top: 0;
+    }
+
+    .section-title .title h2 {
+        height: 100px;
+        font-size: 9rem;
+    }
+
+    .section-text p {
+        font-size: 20px;
+    }
+
+
+    /* **************** 最新のブログ画面 **************** */
+    .blog {
+        width: 50vw;
+        margin: 100vh 0;
+    }
+
+    .blog .blog-area {
+        width: 80%;
+        max-width: 800px;
+        margin-inline: auto;
+    }
+
+
+    /* **************** トップ画面 **************** */
+    .top {
+        position: relative;
+    }
+
+    .top .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: initial;
+    }
+
+    /* 背景画像 */
+    .top .title img {
+        width: 40%;
+        margin-right: 5vw;
+        position: initial;
+    }
+
+    /* タイトルテキスト */
+    .welcome {
+        font-size: 4rem;
+    }
+
+
+    .title .title-texts {
+        width: 40%;
+        height: 80%;
+        position: relative;
+    }
+
+    .title .title-text {
+        height: 20vh;
+        margin: 0;
+    }
+
+    .title .name {
+        top: 10vh;
+        left: 5vw;
+    }
+
+    .title .name h2 {
+        font-size: 5rem;
+        font-weight: 600;
+    }
+
+    .title .portfolio h2 {
+        font-size: 7rem;
+        font-weight: 600;
+    }
+    
+    .title .name .first {
+        margin-left: 0;
+    }
+    
+    .title .name .last {
+        margin-left: 0px;
+    }
+    
+    .title .portfolio {
+        top: calc(10vh + 200px);
+        left: 5vw;
+    }
+
+    /* トップ画面のナビゲーション */
+    .top-navigation {
+        height: 50px;
+        display: block;
+        position: absolute;
+        left: 57.5vw;
+        bottom: calc(10vh);
+    }
+
+    .top-navigation nav {
+        height: 100%;
+    }
+
+    .top-navigation nav ul {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        align-items: flex-end;
+        gap: 2vw;
+    }
+
+    .top-navigation nav ul li {
+        font-family: "Poiret One", sans-serif;
+        font-size: 1.5rem;
+    }
+
+    .top-navigation nav ul li a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+
+    /* **************** 自己紹介画面 **************** */
+    .about {
+        width: 50vw;
+        margin: 100vh 0;
+    }
+
+    .about .main .profile .photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about .main .profile .photo img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about .main .profile .info {
+        width: 500px;
+        margin: 30px auto;
+    }
+
+    .about .main .profile .info table th {
+        width: 200px;
+        font-size: 16px;
+    }
+    
+    .about .main .profile .info table td {
+        font-size: 16px;
+    }
+
+    .about .main .timeline {
+        max-width: 1000px;
+    }
+
+
+    /* **************** 制作物画面 **************** */
+    /* 個々の制作物レイアウト */
+    .works {
+        width: 50vw;
+        margin: 100vh 0;
+    }
+
+    .works .items {
+        max-width: 1300px;
+        display: grid;
+        gap: 50px;
+        grid-template-areas: 
+            'itemA itemB itemC';
+    }
+
+    .works .items .item-list {
+        height: 20vw;
+    }
+    
+    
+    /* 作品サムネイル */
+    .works .items .work-item .thumbnail {
+        height: 16vw;
+        max-height: 225px;
+    }
+
+    .works .items .work-item .thumbnail img {
+        height: 15vw;
+        max-height: 225px;
+    }
+
+    .works .items .work-item .thumbnail img:hover {
+        height: 16vw;
+        max-height: 225px;
+    }
+
+    /* 作品タイトル */
+    .work-item .title {
+        margin: 20px 0;
+    }
+
+    /* 作品の詳細ページ */
+    .works .open .detail {
+        width: 60%;
+        height: 70vh;
+        left: 20vw;
+    }
+
+    .works .open .detail .detail-container {
+        display: grid;
+        grid-template-columns: 60% 1fr;
+        grid-template-rows: 60% 40px 1fr;
+        grid-template-areas: 
+            "itemA itemC"
+            "itemA itemD"
+            "itemB itemB";
+    }
+
+    /* 作品サムネイル */
+    .works .open .detail .image{
+        display: block;
+        width: 30vw;
+        height: 18vw;
+        margin-top: 30px;
+        overflow: hidden;
+        grid-row: 1 / 3;
+        justify-self: center;
+        align-self: center;
+    }
+    .works .open .detail .image img{
+        display: block;
+        width: 30vw;
+        height: 18vw;
+        object-fit: contain;
+    }
+
+    /* 説明文 */
+    .works .open .detail .explanation {
+        grid-area: itemB;
+    }
+
+    /* 使用技術 */
+    .works .open .detail .skills {
+        grid-area: itemC;
+        align-self: center;
+    }
+
+    /* url */
+    .works .open .detail .url {
+        margin: 0 0 0 20px;
+        align-self: center;
+        grid-area: itemD;
+    }
+
+
+    /* **************** 技術紹介画面 **************** */
+    .my-skills {
+        width: 50vw;
+        margin: 100vh 0;
+    }
+
+    .my-skills .chart-area {
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .my-skills .chart-area .chart {
+        width: 500px;
+        height: 500px;
+    }
+
+
+    /* チャートの説明欄 */
+    .my-skills .chart-area .chart-explanation {
+        width: 20vw;
+        height: 200px;
+    }
+
+    /* **************** お問い合わせ画面 **************** */
+    .contact {
+        width: 50vw;
+        margin: 100vh 0;
+    }
 }
