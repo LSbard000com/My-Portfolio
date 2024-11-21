@@ -236,6 +236,7 @@
     background: var(--navy);
     background-size: 100% 300%;
     position: relative;
+    overflow: hidden;
 }
 
 .top .title {
@@ -253,6 +254,7 @@
     object-position: left top;
     position: absolute;
     top: 50vh;
+    z-index: 2;
 }
 
 /* タイトルテキスト */
@@ -274,23 +276,33 @@
 }
 
 .title .title-text {
-    width: 100%;
-    margin: 0;
-    padding: 10vh 0 0 5vw;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: relative;
 }
 
-.title .title-text h2 {
-    margin: 0;
-    font-size: 5rem;
-    font-weight: 600;
+.title .title-text .circle-text {
+    min-width: 300px;
+    min-height: 300px;
+    max-width: 500px;
+    max-height: 500px;
+    font-family: sans-serif;
+    position: absolute;
+    top: calc(30vh - 200px);
+    left: -30vw;
+    border-radius: 50%;
+    z-index: 4;
+}
+
+.title .title-text .circle-text span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0 0;
+    font-weight: bolder;
     color: #fff;
-    z-index: 10;
 }
-
-.title .title-text .portfolio  {
-    font-size: 6rem;
-}
-
 
 /* トップ画面のナビゲーション */
 .top-navigation {
@@ -302,9 +314,11 @@
 /* ブログ画面 */
 .rss-feed {
     width: 50%;
+    height: 200px;
     position: absolute;
-    bottom: 5vh;
+    bottom: 50vh;
     left: 5vw;
+    z-index: 5;
 }
 
 .blog {
