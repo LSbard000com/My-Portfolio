@@ -234,7 +234,6 @@
     height: 100vh;
     width: 100vw;
     background: var(--navy);
-    background-size: 100% 300%;
     position: relative;
     overflow: hidden;
 }
@@ -275,22 +274,32 @@
     text-align: center;
 }
 
+.masato-komukai-portfolio {
+    color: #fff;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.masato-komukai-portfolio h1 {
+    margin: 10px 0;
+}
+
 .title .title-text {
-    width: 300px;
-    height: 300px;
     border-radius: 50%;
     position: relative;
+    transform: translate(-60%, -65%);
+    top: 50%;
+    left: 50%;
+    z-index: 3;
 }
 
 .title .title-text .circle-text {
-    min-width: 300px;
-    min-height: 300px;
-    max-width: 500px;
-    max-height: 500px;
+    width: 100%;
+    height: 100%;
     font-family: sans-serif;
     position: absolute;
-    top: calc(30vh - 200px);
-    left: -30vw;
     border-radius: 50%;
     z-index: 4;
 }
@@ -300,25 +309,19 @@
     top: 50%;
     left: 50%;
     transform-origin: 0 0;
+    font-size: 3rem;
     font-weight: bolder;
     color: #fff;
 }
 
-/* トップ画面のナビゲーション */
-.top-navigation {
-    display: none;
-}
-
-
-
 /* ブログ画面 */
-.rss-feed {
+.title .title-text .rss-feed {
     width: 50%;
     height: 200px;
     position: absolute;
-    bottom: 50vh;
-    left: 5vw;
     z-index: 5;
+    top: calc(50% - 100px);
+    left: 25%;
 }
 
 .blog {
@@ -331,6 +334,12 @@
     justify-content: center;
     align-items: center;
 }
+
+/* トップ画面のナビゲーション */
+.top-navigation {
+    display: none;
+}
+
 
 @keyframes blinking {
     0% {
@@ -1045,26 +1054,6 @@
     }
 
 
-    /* **************** 最新のブログ画面 **************** */
-    .rss-feed {
-        width: 350px;
-        position: absolute;
-        bottom: 20vh;
-        left: 2vw;
-    }
-
-    .blog .new-posts h2 {
-        font-size: 2rem;
-        margin: 20px 0;
-    }
-
-    .blog .blog-area ul li {
-        height: 60px;
-        font-size: 1.1rem;
-    }
-
-
-
     /* **************** トップ画面 **************** */
     .top {
         position: relative;
@@ -1076,7 +1065,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        position: initial;
     }
 
     /* 背景画像 */
@@ -1084,7 +1072,7 @@
         width: 50vw;
         height: 100vh;
         top: 0;
-        left: 0;
+        right: 0;
     }
 
     /* タイトルテキスト */
@@ -1092,33 +1080,40 @@
         font-size: 8rem;
     }
 
-
-    .title .title-texts {
-        width: 50%;
-        height: 100%;
-        position: absolute;
-        right: 0 ;
+    .masato-komukai-portfolio {
+        font-size: 3rem;
+        top: 20vh;
+        left: 57.5vw;
     }
 
     .title .title-text {
-        height: 20vh;
-        margin: 0;
+        position: absolute;
+        left: 0;
+        right: 50vw;
+        transform: translate(-20%, -45%);
     }
 
-    .title .name {
-        top: 20vh;
-        left: 5vw;
+    .title .title-text .circle-text span {
+        font-size: 6rem;
     }
 
-    .title .name h2 {
-        font-size: 7rem;
-        font-weight: 600;
+    /* **************** 最新のブログ画面 **************** */
+    .rss-feed {
+        width: 350px;
+        position: absolute;
+
+    }
+    
+    .blog .new-posts h2 {
+        font-size: 2rem;
+        margin: 20px 0;
+    }
+    
+    .blog .blog-area ul li {
+        height: 60px;
+        font-size: 1.1rem;
     }
 
-    .title .portfolio{
-        font-size: 8rem;
-        font-weight: 600;
-    }
     
 
     /* トップ画面のナビゲーション */
@@ -1128,6 +1123,7 @@
         position: absolute;
         left: 57.5vw;
         bottom: calc(10vh);
+        z-index: 10;
     }
 
     .top-navigation nav {
@@ -1146,13 +1142,17 @@
 
     .top-navigation nav ul li {
         font-family: "Poiret One", sans-serif;
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .top-navigation nav ul li a {
         text-decoration: none;
         color: #fff;
     }
+
+
+    
+    
 
 
     /* **************** 自己紹介画面 **************** */
