@@ -1,52 +1,48 @@
 import React from 'react';
-import RadarChart from './RadarChart';
+import HTML from '../assets/img/HTML5.png'
+import CSS from '../assets/img/CSS.png'
+import JavaScript from '../assets/img/JavaScript.png'
+import TypeScript from '../assets/img/Typescript.png'
+import NodeJs from '../assets/img/nodejs.png'
+import Reactjs from '../assets/img/React.png'
+import Nextjs from '../assets/img/nextjs.png'
+import Tailwind from '../assets/img/Tailwind.png'
+import Firebase from '../assets/img/Firebase.png'
+import Git from '../assets/img/git.png'
+import GitHub from '../assets/img/github.png'
+import Vite from '../assets/img/Vite.png'
+import Netlify from '../assets/img/netlify.png'
+
 
 
 const Skills: React.FC = () => {
+    const iconList = [
+        { name: 'HTML', img: HTML},
+        { name: 'CSS', img: CSS},
+        { name: 'JavaScript', img: JavaScript},
+        { name: 'TypeScript', img: TypeScript},
+        { name: 'NodeJs', img: NodeJs},
+        { name: 'Reactjs', img: Reactjs},
+        { name: 'Nextjs', img: Nextjs},
+        { name: 'Tailwind', img: Tailwind},
+        { name: 'Firebase', img: Firebase},
+        { name: 'Git', img: Git},
+        { name: 'GitHub', img: GitHub},
+        { name: 'Vite', img: Vite},
+        { name: 'Netlify', img: Netlify}
+    ]
+
     return (
         <div className='my-skills'>
-
-            {/* タイトル */}
-            <div className="section-title">
-                <h2>Skills</h2>
-            </div>
-
-            {/* チャート */}
-            <div className='chart-area'>
-                <div className='chart'>
+            <div className='skill-set'>
+                {iconList.map((skill) => (
                     <div>
-                        <RadarChart />
+                        <img src={skill.img} alt={skill.name} />
+                        <label>{skill.name}</label>
+                        <p>自分のスキルです</p>
                     </div>
-                </div>
-
-                {/* チャートの説明欄 */}
-                <div className='chart-explanation'>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>レベル</th><th>経験値</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>5</td><td>実務5年以上</td>
-                            </tr>
-                            <tr>
-                                <td>4</td><td>実務3年以上</td>
-                            </tr>
-                            <tr>
-                                <td>3</td><td>実務経験有り</td>
-                            </tr>
-                            <tr>
-                                <td>2</td><td>開発経験有り</td>
-                            </tr>
-                            <tr>
-                                <td>1</td><td>学習中</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div> 
-            </div>
+                ))}
+            </div>           
         </div>
     );
 };
