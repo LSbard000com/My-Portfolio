@@ -58,6 +58,7 @@ const top = () => {
             <div className='masato-komukai-portfolio'>
                 {nameTitle.map((name,index)=>(
                     <motion.h1
+                    className={`item${index}`}
                     initial={{opacity: 0, x: -50}}
                     animate={{opacity: 1, x: 0}}
                     transition={{duration: 5, delay: index / 3 + 6}}

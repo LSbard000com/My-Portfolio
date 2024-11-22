@@ -275,12 +275,27 @@
 }
 
 .masato-komukai-portfolio {
+    width: 90%;
     color: #fff;
     z-index: 10;
     position: absolute;
-    top: 0;
-    right: 0;
+    bottom: 5vw;
+    left: 5vw;
+    display: grid;
+    grid-template-areas: 
+        "item1 item2 x"
+        "x     item3 item3";
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
 }
+
+.item2 {
+    font-size: 3rem;
+    grid-area: 'item3';
+    grid-column: 2 / 4;
+    justify-self: center;
+}
+
 
 .masato-komukai-portfolio h1 {
     margin: 10px 0;
@@ -400,6 +415,7 @@
 .about {
     width: 100%;
     min-height: 500px;
+    overflow: hidden;
 }
 
 .about .main {
@@ -1120,7 +1136,13 @@
         font-size: 3rem;
         top: 20vh;
         left: 57.5vw;
+        display: initial;
     }
+    .item2 {
+        font-size: 8rem;
+        justify-self: left;
+    }
+    
 
     .title .title-text {
         position: absolute;
