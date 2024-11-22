@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios'; // フェッチ用
 import { XMLParser } from 'fast-xml-parser';
-import { motion } from 'framer-motion'
 
 interface NoteItem {
     title: string
