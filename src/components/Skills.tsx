@@ -34,6 +34,12 @@ const Skills: React.FC = () => {
     ]
 
     return (
+        <>
+        <Title 
+            title='Skills' 
+            text='' 
+            animationType='right'
+        />
         <div className='my-skills'>
             <div className='skill-set'>
                 {iconList.map((skill) => (
@@ -45,6 +51,7 @@ const Skills: React.FC = () => {
                 ))}
             </div>           
         </div>
+        </>
     );
 };
 export default Skills
