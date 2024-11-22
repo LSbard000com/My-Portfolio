@@ -456,12 +456,9 @@
 
 /* タイムライン */
 .about .main .timeline {
-    width: 70%;
+    width: 90%;
     margin: 10px auto;
     padding: 10px;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.6);
-    box-shadow: 0px 0px 20px #aaa;
 }
 
 .about .main .timeline .vertical-timeline-element {
@@ -778,8 +775,8 @@
 
 
 .contact .plofile-img .img-area img {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     transform: scale(1.3);
     transform-origin: 0px 0px;
@@ -810,7 +807,7 @@
 
 
 .contact .contents ul li a {
-    color: #fff;
+    color: #000;
     font-size: 40px;
     text-decoration: none;
     display: flex;
@@ -1251,6 +1248,7 @@
 
     /* 作品の詳細ページ */
     .works .open .detail {
+        transform: translate(0, -50%);
         width: 60%;
         height: 70vh;
         left: 20vw;
@@ -1325,589 +1323,38 @@
         width: 50vw;
         margin: 100vh 0;
     }
-}
 
-
-
-/* **************** お問い合わせ画面 **************** */
-.contact {
-    width: 100%;
-}
-
-/* 自己紹介画像 */
-.contact .plofile-img {
-    width: 100%;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.contact .plofile-img .img-area{
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-    overflow: hidden;
-}
-
-
-.contact .plofile-img .img-area img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    transform: scale(1.3);
-    transform-origin: 0px 0px;
-}
-
-/* 各種コンテンツ */
-.contact .contents {
-    width: 100%;
-    height: 150px;
-}
-
-.contact .contents ul {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    align-items: flex-start;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.contact .contents ul li {
-    width: 60px;
-    height: 100px;
-}
-
-
-.contact .contents ul li a {
-    color: #fff;
-    font-size: 40px;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-}
-
-.contact .contents ul li span {
-    display: block;
-    width: 100%;
-    margin: 5px 0;
-    text-align: center;
-}
-
-
-
-/* **************** フッター画面 **************** */
-.footer {
-    width: 100%;
-    height: 10vh;
-    background-color: #fff;
-}
-
-.footer .copyright {
-    color: #000;
-    width: 100%;
-    height: 100%;
-    font-size: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* ジャンプボタン */
-/* open */
-.footer .open .jump-btn {
-    width: 60px;
-    height: 60px;
-    border-radius: 100%;
-    background-color: #fff;
-    position: fixed;
-    right: 20px;
-    bottom: calc(10vh - 30px);
-    opacity: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition-duration: .5s;
-}
-
-.footer .jump-btn a {
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    background-color: var(--navy);
-}
-
-.footer .jump-btn a span {
-    width: 25px;
-    height: 5px;
-    background-color: #fff;
-    position: absolute;
-    top: 25px;
-}
-
-.footer .jump-btn a span:nth-child(1) {
-    transform: rotate(-45deg);
-    left: 10.4px;
-}
-
-.footer .jump-btn a span:nth-child(2) {
-    transform: rotate(45deg);
-    right: 10.4px;
-}
-
-/* close */
-.footer .close .jump-btn {
-    position: fixed;
-    right: 20px;
-    bottom: -20vh;
-    opacity: 0;
-}
-
-
-/* ********************************************** PC画面 ********************************************** */
-@media (min-width: 1000px) {
-    /* **************** サイドバー非表示 **************** */
-    .sidebar .nav-btn {
-        display: none;
+    .contact .plofile-img {
+        height: 300px;
     }
 
-    /* **************** ヘッダー **************** */
-    .header {
-        width: 100%;
-        display: block;
-        position: fixed;
-        top: 0;
-        z-index: 50;
-    }
-
-    .header-area {
-        display: flex;
-        justify-content: space-between;
-        font-family: "Poiret One", sans-serif;
-    }
-
-    .header .open {
-        width: 100%;
-        height: 60px;
-        background-color: rgba(255, 255, 255, 0.9);
-        transition-duration: .5s;
-    }
-
-    .header .close {
-        height: 0px;
-        opacity: 0;
-        overflow: hidden;
-        transition-duration: .5s;
-    }
-
-    /* タイトル */
-    .header .title {
-        width: 400px;
-        height: 100%;
-        margin-inline: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .header .title a {
-        text-decoration: none;
-    }
-
-    .header .title a .title-h {
-        margin: 0;
-        line-height: 60px;
-        color: #000;
-    }
-
-    /* ヘッダーナビゲーション*/
-    .header .header-navigation {
-        display: flex;
-        margin-right: 50px;
-    }
-
-
-    .header .header-nav {
+    .contact .plofile-img .img-area{
         width: 200px;
-        opacity: 0.9;
-        cursor: pointer;
-    }
-
-    /* ナビゲーションタイトル */
-    .header .header-nav h2 {
-        height: 60px;
-        line-height: 67px;
-        margin: 0;
-        text-align: center;
-        color: #000;
-    }
-
-    /* ナビゲーションのタブ内 */
-    .header .header-nav nav {
-        max-height: 0;
-        background-color: #fff;
-        opacity: 0;
-        overflow: hidden;
-        transition-duration: .5s;
-    }
-
-    .header .open-sec nav {
-        max-height: 400px;
-        opacity: 1;
-        transition-duration: .5s;
-    }
-
-    .header .open-cont nav {
-        max-height: 300px;
-        opacity: 1;
-        transition-duration: .5s;
-    }
-
-    .header .header-nav nav ul {
-        width: 100%;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    .header .header-nav .section-items ul li {
-        width: 100px;
-        margin: 35px auto ;
-        text-align: center;
-    }
-
-    .header .header-nav .link-items ul li {
-        width: 100px;
-        margin: 28px auto;
-        text-align: center;
-    }
-
-    .header .header-nav nav ul li a {
-        text-decoration: none;
-        color: #000;
-        font-size: 24px;
-        position: relative;
-    }
-
-    .header .header-nav nav ul li a::after {
-        position: absolute;
-        left: 0;
-        content: '';
-        width: 100%;
-        height: 1px;
-        background: #000000;
-        bottom: -3px; 
-        opacity: 0;
-        visibility: hidden;
-        transition: 0.3s;
-    }
-
-    .header .header-nav nav ul li a:hover::after {
-        visibility: visible;
-        bottom: 0px;
-        opacity: 1;
-    }
-
-    .header .links {
-        width: 200px;
-    }
-
-    .header .links .link-items {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .header .links .link-items ul {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        list-style: none;
-        gap: 40px;
-    }
-
-    .header .links .link-items ul li {
-        margin-top: 4px;
-        font-size: 25px;
-    }
-
-    .header .header-nav nav ul li a i{
-        color: #000;
-        font-size: 20px;
-    }
-
-     /* **************** セクション **************** */
-    .section {
-        display: flex;
-    }
-
-
-
-
-
-    /* **************** セクションタイトル **************** */
-    .section-title {
-        width: 50vw;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: sticky;
-        top: 0;
-    }
-
-    .section-title .title h2 {
-        height: 100px;
-        font-size: 9rem;
-    }
-
-    .section-text p {
-        font-size: 20px;
-    }
-
-
-    /* **************** トップ画面 **************** */
-    .top {
-        position: relative;
-    }
-
-    .top .title {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    /* 背景画像 */
-    .top .title img {
-        width: 50vw;
-        height: 100vh;
-        top: 0;
-        right: 0;
-    }
-
-    /* タイトルテキスト */
-    .welcome {
-        font-size: 8rem;
-    }
-
-    .masato-komukai-portfolio {
-        font-size: 3rem;
-        top: 20vh;
-        left: 57.5vw;
-    }
-
-    .title .title-text {
-        position: absolute;
-        left: 0;
-        right: 50vw;
-        transform: translate(-20%, -45%);
-    }
-
-    .title .title-text .circle-text span {
-        font-size: 6rem;
-    }
-
-    /* **************** 最新のブログ画面 **************** */
-    .rss-feed {
-        width: 350px;
-        position: absolute;
-
-    }
-    
-    .blog .new-posts h2 {
-        font-size: 2rem;
-        margin: 20px 0;
-    }
-    
-    .blog .blog-area ul li {
-        height: 60px;
-        font-size: 1.1rem;
-    }
-
-    
-
-    /* トップ画面のナビゲーション */
-    .top-navigation {
-        height: 50px;
-        display: block;
-        position: absolute;
-        left: 57.5vw;
-        bottom: calc(10vh);
-        z-index: 10;
-    }
-
-    .top-navigation nav {
-        height: 100%;
-    }
-
-    .top-navigation nav ul {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        display: flex;
-        align-items: flex-end;
-        gap: 2vw;
-    }
-
-    .top-navigation nav ul li {
-        font-family: "Poiret One", sans-serif;
-        font-size: 2rem;
-    }
-
-    .top-navigation nav ul li a {
-        text-decoration: none;
-        color: #fff;
-    }
-
-
-    
-    
-
-
-    /* **************** 自己紹介画面 **************** */
-    .about {
-        width: 50vw;
-        margin: 100vh 0;
-    }
-
-    .about .main .profile .photo {
-        width: 150px;
-        height: 150px;
-    }
-
-    .about .main .profile .photo img {
-        width: 150px;
-        height: 150px;
-    }
-
-    .about .main .profile .info {
-        width: 500px;
-        margin: 30px auto;
-    }
-
-    .about .main .profile .info table th {
-        width: 200px;
-        font-size: 16px;
-    }
-    
-    .about .main .profile .info table td {
-        font-size: 16px;
-    }
-
-    .about .main .timeline {
-        max-width: 1000px;
-    }
-
-
-    /* **************** 制作物画面 **************** */
-    /* 個々の制作物レイアウト */
-    .works {
-        width: 50vw;
-        margin: 100vh 0;
-    }
-
-    .works .items {
-        width: 300vw;
-        height: 40vw;
-    }
-
-    .works .items img {
-        height: 20vw;
-    }
-
-    .works-introduction img {
-        height: 30vw;
-    }
-
-    /* 作品の詳細ページ */
-    .works .open .detail {
-        width: 60%;
-        height: 70vh;
-        left: 20vw;
-    }
-
-    .works .open .detail .detail-container {
-        display: grid;
-        grid-template-columns: 60% 1fr;
-        grid-template-rows: 60% 40px 1fr;
-        grid-template-areas: 
-            "itemA itemC"
-            "itemA itemD"
-            "itemB itemB";
-    }
-
-    /* 作品サムネイル */
-    .works .open .detail .image{
-        display: block;
-        width: 30vw;
-        height: 18vw;
-        margin-top: 30px;
-        overflow: hidden;
-        grid-row: 1 / 3;
-        justify-self: center;
-        align-self: center;
-    }
-    .works .open .detail .image img{
-        display: block;
-        width: 30vw;
-        height: 18vw;
-        object-fit: contain;
-    }
-
-    /* 説明文 */
-    .works .open .detail .explanation {
-        grid-area: itemB;
-    }
-
-    /* 使用技術 */
-    .works .open .detail .skills {
-        grid-area: itemC;
-        align-self: center;
-    }
-
-    /* url */
-    .works .open .detail .url {
-        margin: 0 0 0 20px;
-        align-self: center;
-        grid-area: itemD;
-    }
-
-
-    /* **************** 技術紹介画面 **************** */
-    .my-skills {
-        width: 50vw;
-        margin: 100vh 0;
-    }
-
-    .my-skills .chart-area {
-        width: 60%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .my-skills .chart-area .chart {
-        width: 500px;
-        height: 500px;
-    }
-
-
-    /* チャートの説明欄 */
-    .my-skills .chart-area .chart-explanation {
-        width: 20vw;
         height: 200px;
     }
 
-    /* **************** お問い合わせ画面 **************** */
-    .contact {
-        width: 50vw;
-        margin: 100vh 0;
+    .contact .contents ul {
+        gap: 50px;
+    }
+
+    .contact .contents ul li {
+        width: 100px;
+    }
+
+    .contact .contents ul li a {
+        font-size: 60px;
+    }
+
+    .contact .contents ul li span {
+        font-size: 30px;
+    }
+
+    /* **************** フッター画面 **************** */
+    .footer {
+        height: 20vh;
+    }
+
+    .footer .copyright {
+        font-size: 30px;
     }
 }

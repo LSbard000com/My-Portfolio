@@ -7,7 +7,7 @@ const Contact = () => {
     {/* タイトル */}
     <Title 
             title='Contact'
-            text='下記のリンクより気軽にお問い合わせください'
+            text='各種リンクより気軽にお問い合わせください'
             animationType='right'
     />
     
