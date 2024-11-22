@@ -13,6 +13,7 @@ import GitHub from '../assets/img/github.png'
 import Vite from '../assets/img/Vite.png'
 import Netlify from '../assets/img/netlify.png'
 
+import Title from './Title';
 
 
 const Skills: React.FC = () => {
