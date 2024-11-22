@@ -681,42 +681,77 @@
 }
 
 .skill-set {
-    width: 80%;
-    height: 50px;
+    width: 90%;
+    perspective: 1000px;
     margin-inline: auto;
+    display: flex;
+    gap: 5vw;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.skill-set div {
-    width: 100%;
-    margin: 20px 0;
-    background-color: #fff;
-    color: black;
-    border-radius: 10px;
-    display: grid;
-    grid-template-columns: 100px 1fr;
-    grid-template-rows: 50px 50px;
-    grid-template-areas: 
-    'img name'
-    'img text';
+.skill-set .card {
+    position: relative;
+    width: 100px;
+    height: 140px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    transform-style: preserve-3d;
+    transition-duration: .5s;
+    cursor: pointer;
+    font-family: sans-serif;
+    box-shadow: 0px 0px 10px #aaa;
 }
 
-.skill-set img {
-    grid-area: 'img';
-    grid-row: 1 / 3;
+.skill-set .card:hover {
+    transform: rotateY(-180deg); 
+}
+
+.skill-set .front,
+.skill-set .back {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    border-radius: 10px;
+    backface-visibility: hidden; 
+    border-radius: 5px;
 }
 
-.skill-set label {
-    align-self: center;
-    grid-area: 'name';
+.skill-set .back {
+    transform: rotateY(180deg);
+    position: relative;
 }
 
-.skill-set p {
-    grid-area: text;
+.back h3 {
+    margin: 5px 0;
+    text-align: center;
 }
+.back div {
+    margin: 5px 0 ;
+    text-align: center;
+    font-weight: bold;
+}
+
+.back img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    object-fit: contain; 
+    z-index: -1;
+}
+
+.skill-set .front img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+}
+
 
 
 
@@ -1054,6 +1089,7 @@
     }
 
     .section-text p {
+        width: 100%;
         font-size: 20px;
     }
 

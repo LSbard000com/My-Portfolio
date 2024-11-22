@@ -12,42 +12,94 @@ import Git from '../assets/img/git.png'
 import GitHub from '../assets/img/github.png'
 import Vite from '../assets/img/Vite.png'
 import Netlify from '../assets/img/netlify.png'
-
 import Title from './Title';
+import { motion } from 'framer-motion';
+import { InView } from 'react-intersection-observer';
 
 
 const Skills: React.FC = () => {
     const iconList = [
-        { name: 'HTML', img: HTML},
-        { name: 'CSS', img: CSS},
-        { name: 'JavaScript', img: JavaScript},
-        { name: 'TypeScript', img: TypeScript},
-        { name: 'NodeJs', img: NodeJs},
-        { name: 'Reactjs', img: Reactjs},
-        { name: 'Nextjs', img: Nextjs},
-        { name: 'Tailwind', img: Tailwind},
-        { name: 'Firebase', img: Firebase},
-        { name: 'Git', img: Git},
-        { name: 'GitHub', img: GitHub},
-        { name: 'Vite', img: Vite},
-        { name: 'Netlify', img: Netlify}
+        { name: 'HTML', img: HTML, level: 2},
+        { name: 'CSS', img: CSS, level: 2},
+        { name: 'JavaScript', img: JavaScript, level: 2},
+        { name: 'TypeScript', img: TypeScript, level: 2},
+        { name: 'NodeJs', img: NodeJs, level: 1},
+        { name: 'Reactjs', img: Reactjs, level: 2},
+        { name: 'Nextjs', img: Nextjs, level: 1},
+        { name: 'Tailwind', img: Tailwind, level: 1},
+        { name: 'Firebase', img: Firebase, level: 2},
+        { name: 'Git', img: Git, level: 2},
+        { name: 'GitHub', img: GitHub, level: 2},
+        { name: 'Vite', img: Vite, level: 2},
+        { name: 'Netlify', img: Netlify, level: 2}
     ]
+
+    const levelDiscrimination = (level:number) => {
+        let levelMark: string = ''
+        let levelText: string = ''
+        
+        switch(level){
+            case 1 :
+                levelMark = '★☆☆☆☆'
+                levelText = '学習中'
+                break;
+            case 2 :
+                levelMark = '★★☆☆☆'
+                levelText = '開発経験あり'
+                break;
+            case 3 :
+                levelMark = '★★★☆☆'
+                levelText = '実務経験あり'
+                break;
+            case 4 :
+                levelMark = '★★★★☆'
+                levelText = '3年以上の実務経験あり'
+                break;
+            case 5 :
+                levelMark = '★★★★'
+                levelText = '5年以上の実務経験あり'
+                break;
+        }
+        
+        return (
+            <>
+            <div>{levelMark}</div>
+            <div>{levelText}</div>
+            </>
+        )
+    }
 
     return (
         <>
         <Title 
             title='Skills' 
-            text='' 
+            text='使用している技術について紹介します' 
             animationType='right'
         />
         <div className='my-skills'>
             <div className='skill-set'>
                 {iconList.map((skill) => (
-                    <div>
-                        <img src={skill.img} alt={skill.name} />
-                        <label>{skill.name}</label>
-                        <p>自分のスキルです</p>
-                    </div>
+                    <InView threshold={0.8}>
+                        {({ref,inView}) => (
+                            <motion.div 
+                                className='card' 
+                                ref={ref}
+                                initial={{opacity: 0}}
+                                animate={inView ? {opacity: 1} : {}}
+                                transition={{duration: 1.5}}
+                            >
+                                <div className='front'>
+                                    <img src={skill.img} alt={skill.name} />
+                                </div>
+                                <div className='back'>
+                                    <h3>{skill.name}</h3>
+                                    {levelDiscrimination(skill.level)}
+                                    <img src={skill.img} alt={skill.name} />
+                                </div>
+                            </motion.div>
+                        )}
+                    </InView>
+                    
                 ))}
             </div>           
         </div>
