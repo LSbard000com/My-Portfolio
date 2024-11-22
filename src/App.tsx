@@ -2,8 +2,8 @@ import './App.css'
 import About from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Section from './components/Section'
 import Header from './components/Header'
-import Rssfeed from './components/Rssfeed'
 import SideBar from './components/SideBar'
 import Skills from './components/Skills'
 import Top from './components/Top'
@@ -17,11 +17,18 @@ function App() {
       <SideBar />
       <Header />
       <Top />
-      <Rssfeed />
-      <About />
-      <Works />
-      <Skills />
-      <Contact />
+      <Section layoutType='left'>
+        <About />
+      </Section>
+      <Section layoutType='right'>
+        <Works />
+      </Section>
+      <Section layoutType='left'>
+        <Skills />
+      </Section>
+      <Section layoutType='right'>
+        <Contact />
+      </Section>
       <Footer />
     </>
   )

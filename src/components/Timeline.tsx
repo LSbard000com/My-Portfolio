@@ -55,7 +55,7 @@ const Timeline = () => {
                                 boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.5)",
                                 transform: inView ? "translateX(0)" : "translateX(50px)",
                                 opacity: inView ? 1 : 0,
-                                transition: "all 0.5s ease-out",
+                                transition: "all 0.5s ease-out",                           
                             }}
                             contentArrowStyle={{ borderRight: "7px solid rgba(0, 80, 112, 0.9)" }}
                             iconStyle={{ background: "#193278", color: "#fff"}}   
@@ -66,7 +66,7 @@ const Timeline = () => {
                             }      
                         >
                             <h2>{element.title}</h2>
-                            <p>{element.content}</p>
+                            <p style={{fontFamily: "sans-serif"}}>{element.content}</p>
                         </VerticalTimelineElement>
                         </div>
                     )}

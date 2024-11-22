@@ -4,11 +4,13 @@ import Title from './Title'
 
 const About = () => {
   return (
+    <>
+    <Title 
+      title='About'
+      text='はじめましてどうぞごゆくっりご覧ください'
+      animationType='left'
+    />
     <div id='about' className="about">
-      <Title 
-        title='About'
-        text='はじめましてどうぞごゆくっりご覧ください'
-       />
       <div className='main'>
         <div className='profile'>
           <div className='photo'>
@@ -35,6 +37,8 @@ const About = () => {
         </div>
       </div>
     </div>
+    </>
+    
   )
 }
 

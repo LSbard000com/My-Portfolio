@@ -3,6 +3,8 @@ import matrixCalculation from '../assets/img/行列計算.png'
 import mathQuestionBox from '../assets/img/みんなの数学質問箱.png'
 import myPortfolio from '../assets/img/ポートフォリオサイト.png'
 import Title from './Title';
+import { motion } from 'framer-motion';
+import { InView } from 'react-intersection-observer';
 
 
 type WorkItemProps = {
@@ -41,16 +43,14 @@ const WorksItem:React.FC<WorkItemProps> = (
 
 
     return (
-        <div className="work-item">
-            <div className='thumbnail' onClick={ClickSetWorkInformation}>
-                <img src={img} />
-            </div>
-            <div className='title'>
-                <h3>{title}</h3>
-            </div>
-        </div>
+        <>
+            <img src={img} onClick={ClickSetWorkInformation} />
+        </>
     )
 }
+
+
+
 
 const Works = () => {
     // 作品サムネイルクリックで詳細画面を展開
@@ -75,54 +75,101 @@ const Works = () => {
     }
 
 
+    // 作品リスト
+    const workList = [
+        {
+            title: '行列計算アプリ',
+            img : 
+            <WorksItem 
+                img={matrixCalculation}
+                title='行列計算アプリ'
+                skills={['HTML','CSS','JavaScript','React','Git','GitHub',' Netlify']}
+                explanation='行列の積の計算ができるアプリケーションです。計算する行列のサイズを自由に指定することができます。Reactを初めて用いたアプリケーションで、この開発を通してステートやフックの基本的な使い方を理解することができました。'
+                url={{github: 'https://github.com/LSbard000com/Matrix-Calculation', link:'https://poetic-cascaron-d91dd2.netlify.app/'}}
+                setDetail={detailOpenAndClose}
+                setWorkInfo={setWorkInfo}
+            />
+        },
+        {
+            title: 'みんなの数学質問箱',
+            img :
+            <WorksItem 
+                img={mathQuestionBox}
+                title='みんなの数学質問箱'
+                skills={['HTML','CSS','TypeScript','React','React Router','Firebase Firestore','Firebase Authentication','Fuse.js','Git','GitHub']}
+                explanation='数学に関する質問を投稿するWebサイトです。質問に対して回答したり、カテゴリやキーワードで検索する機能を作りました。また、Firebaseを用いてデータベースと認証機能を実装しました。TypeScriptやFirebase、ルーティングなど初めて使った技術が多かったため、かなりの試行錯誤が必要でした。この開発を通して学ぶことも多かったのでとても良い開発になりました。'
+                url={{github: 'https://github.com/LSbard000com/math-question-box-app', link:''}}
+                setDetail={detailOpenAndClose}
+                setWorkInfo={setWorkInfo}
+            />
+        },
+        {
+            title: 'ポートフォリオサイト',
+            img :
+            <WorksItem 
+                img={myPortfolio}
+                title='ポートフォリオサイト'
+                skills={['HTML','CSS','TypeScript','React','Intersection Observer','Framer Motion','react-vertical-timeline-component','Chart.js','Vite','Git','GitHub',' Netlify']}
+                explanation='自分のポートフォリオサイトです。Intersection ObserverとFramer Motionを用いたアニメーションをつけたり、レスポンシブデザインを考えたりとUIを意識して開発しました。また、Viteを用いて実行環境を構築してみました。デスクトップとモバイル画面、両方でご覧いただけると幸いです。'
+                url={{github: 'https://github.com/LSbard000com/My-Portfolio', link:'https://masatokomukai.netlify.app/'}}
+                setDetail={detailOpenAndClose}
+                setWorkInfo={setWorkInfo}
+            />
+        }
+    ]
+
+
 
   return (
-    <div id='works' className="works">
-        {/* タイトル */}
-        <Title 
+    <>
+    <Title 
             title='Works'
             text='日々の学びを形に残した制作物をご覧ください'
-        />
-
+            animationType='right'
+    />
+    <div id='works' className="works">
         {/* 個々の作品を表示 */}
-        <div className='items'>
-            <div className='item-list'>
-                <WorksItem 
-                    img={matrixCalculation}
-                    title='行列計算アプリ'
-                    skills={['HTML','CSS','JavaScript','React','Git','GitHub',' Netlify']}
-                    explanation='行列の積の計算ができるアプリケーションです。計算する行列のサイズを自由に指定することができます。Reactを初めて用いたアプリケーションで、この開発を通してステートやフックの基本的な使い方を理解することができました。'
-                    url={{github: 'https://github.com/LSbard000com/Matrix-Calculation', link:'https://poetic-cascaron-d91dd2.netlify.app/'}}
-                    setDetail={detailOpenAndClose}
-                    setWorkInfo={setWorkInfo}
-                />
-            </div>
+        <motion.div 
+            className='items'
+            animate={{ x: [ 0, '-50%'] }}
+            transition={{
+                repeat: Infinity, // 無限ループ
+                duration: 30, // アニメーション全体の時間
+                ease: "linear", // 一定速度
+            }}
 
-            <div className='item-list'>
-                <WorksItem 
-                    img={mathQuestionBox}
-                    title='みんなの数学質問箱'
-                    skills={['HTML','CSS','TypeScript','React','React Router','Firebase Firestore','Firebase Authentication','Fuse.js','Git','GitHub']}
-                    explanation='数学に関する質問を投稿するWebサイトです。質問に対して回答したり、カテゴリやキーワードで検索する機能を作りました。また、Firebaseを用いてデータベースと認証機能を実装しました。TypeScriptやFirebase、ルーティングなど初めて使った技術が多かったため、かなりの試行錯誤が必要でした。この開発を通して学ぶことも多かったのでとても良い開発になりました。'
-                    url={{github: 'https://github.com/LSbard000com/math-question-box-app', link:''}}
-                    setDetail={detailOpenAndClose}
-                    setWorkInfo={setWorkInfo}
-                />
-            </div>
+        >
+            {workList.map((item,index) => (
+                <div key={index} className='item-list'>
+                    {item.img}
+                </div>
+            ))}
+            {workList.map((item,index) => (
+                <div key={index + workList.length} className='item-list'>
+                    {item.img}
+                </div>
+            ))}
+        </motion.div>
 
-            <div className='item-list'>
-                <WorksItem 
-                    img={myPortfolio}
-                    title='ポートフォリオサイト'
-                    skills={['HTML','CSS','TypeScript','React','Intersection Observer','Framer Motion','react-vertical-timeline-component','Chart.js','Vite','Git','GitHub',' Netlify']}
-                    explanation='自分のポートフォリオサイトです。Intersection ObserverとFramer Motionを用いたアニメーションをつけたり、レスポンシブデザインを考えたりとUIを意識して開発しました。また、Viteを用いて実行環境を構築してみました。デスクトップとモバイル画面、両方でご覧いただけると幸いです。'
-                    url={{github: 'https://github.com/LSbard000com/My-Portfolio', link:'https://masatokomukai.netlify.app/'}}
-                    setDetail={detailOpenAndClose}
-                    setWorkInfo={setWorkInfo}
-                />
-            </div>
-
+        <div className='works-introduction'>
+            {workList.map((item,index) => (
+                <InView threshold={0.5}>
+                    {({ref, inView}) => (
+                        <motion.div 
+                            key={index}
+                            ref={ref}
+                            initial={{opacity: 0, y: 50}}
+                            animate={inView ? {opacity: 1, y: 0} : {}}
+                            transition={{duration: 1.5}}
+                        >
+                            {item.img}
+                            <h2>{item.title}</h2>
+                        </motion.div>
+                    )}
+                </InView>
+            ))}
         </div>
+        
 
         {/* 作品の詳細画面 */}
         <div className={isDetail ? 'open' : 'close'}>
@@ -179,6 +226,7 @@ const Works = () => {
             <div className='mask' onClick={detailOpenAndClose}></div>
         </div>
     </div>
+    </>
   )
 }
 

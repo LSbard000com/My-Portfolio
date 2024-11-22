@@ -3,18 +3,22 @@ import Title from './Title'
 
 const Contact = () => {
   return (
+    <>
+    {/* タイトル */}
+    <Title 
+            title='Contact'
+            text='各種リンクより気軽にお問い合わせください'
+            animationType='right'
+    />
+    
     <div id='contact' className="contact">
 
-        {/* タイトル */}
-        <Title 
-            title='Contact'
-            text='下記のリンクより気軽にお問い合わせください'
-        />
+        
 
         {/* 自己紹介画像 */}
         <div className="plofile-img">
             <div className='img-area'>
-            <   img src={myPhoto} />
+            <img src={myPhoto} />
             </div>
         </div>
 
@@ -38,6 +42,7 @@ const Contact = () => {
             </ul>
         </div>
     </div>
+    </>
   )
 }
 

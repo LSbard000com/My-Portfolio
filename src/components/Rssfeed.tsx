@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios'; // フェッチ用
 import { XMLParser } from 'fast-xml-parser';
-import Title from './Title';
+import { motion } from 'framer-motion'
 
 interface NoteItem {
     title: string
@@ -22,7 +22,7 @@ const Rssfeed = () => {
             const response = await axios.get<string>(rssFeedURL, { responseType : 'text'});
             const parser = new XMLParser();
             const parseData = parser.parse(response.data)
-            const items = parseData.rss.channel.item.slice(0,5)
+            const items = parseData.rss.channel.item.slice(0,3)
             setNoteFeeds(items as NoteItem[])
         } catch(error:unknown) {
             if(error){
@@ -45,8 +45,11 @@ const Rssfeed = () => {
       };
 
     return (
+        <>
         <div id='blog' className='blog'>
-        <Title title='Blog' text='日々の学びの備忘録を残してありますので、ぜひご覧ください。'/>
+            <div className='new-posts'>
+                <h2>New Posts!</h2>
+            </div>
             <div className='blog-area'>
                 <ul>
                 {noteFeeds.map((article, index) => (
@@ -61,6 +64,7 @@ const Rssfeed = () => {
                 </ul>
             </div>
       </div>
+      </>
     )
 
 }
