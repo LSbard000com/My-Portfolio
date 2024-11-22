@@ -161,8 +161,7 @@ const Works = () => {
                             initial={{opacity: 0, y: 50}}
                             animate={inView ? {opacity: 1, y: 0} : {}}
                             transition={{duration: 1.5}}
-                            
-                            >
+                        >
                             {item.img}
                             <h2>{item.title}</h2>
                         </motion.div>

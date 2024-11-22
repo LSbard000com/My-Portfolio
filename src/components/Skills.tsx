@@ -13,6 +13,8 @@ import GitHub from '../assets/img/github.png'
 import Vite from '../assets/img/Vite.png'
 import Netlify from '../assets/img/netlify.png'
 import Title from './Title';
+import { motion } from 'framer-motion';
+import { InView } from 'react-intersection-observer';
 
 
 const Skills: React.FC = () => {
@@ -71,22 +73,33 @@ const Skills: React.FC = () => {
         <>
         <Title 
             title='Skills' 
-            text='' 
+            text='使用している技術について紹介します' 
             animationType='right'
         />
         <div className='my-skills'>
             <div className='skill-set'>
                 {iconList.map((skill) => (
-                    <div className='card'>
-                        <div className='front'>
-                            <img src={skill.img} alt={skill.name} />
-                        </div>
-                        <div className='back'>
-                            <h3>{skill.name}</h3>
-                            {levelDiscrimination(skill.level)}
-                            <img src={skill.img} alt={skill.name} />
-                        </div>
-                    </div>
+                    <InView threshold={0.8}>
+                        {({ref,inView}) => (
+                            <motion.div 
+                                className='card' 
+                                ref={ref}
+                                initial={{opacity: 0}}
+                                animate={inView ? {opacity: 1} : {}}
+                                transition={{duration: 1.5}}
+                            >
+                                <div className='front'>
+                                    <img src={skill.img} alt={skill.name} />
+                                </div>
+                                <div className='back'>
+                                    <h3>{skill.name}</h3>
+                                    {levelDiscrimination(skill.level)}
+                                    <img src={skill.img} alt={skill.name} />
+                                </div>
+                            </motion.div>
+                        )}
+                    </InView>
+                    
                 ))}
             </div>           
         </div>
