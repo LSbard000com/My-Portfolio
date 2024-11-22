@@ -13,6 +13,7 @@ import GitHub from '../assets/img/github.png'
 import Vite from '../assets/img/Vite.png'
 import Netlify from '../assets/img/netlify.png'
 
+import Title from './Title';
 
 
 const Skills: React.FC = () => {
@@ -33,6 +34,12 @@ const Skills: React.FC = () => {
     ]
 
     return (
+        <>
+        <Title 
+            title='Skills' 
+            text='' 
+            animationType='right'
+        />
         <div className='my-skills'>
             <div className='skill-set'>
                 {iconList.map((skill) => (
@@ -44,6 +51,7 @@ const Skills: React.FC = () => {
                 ))}
             </div>           
         </div>
+        </>
     );
 };
 export default Skills
