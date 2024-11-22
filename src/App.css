@@ -1309,24 +1309,16 @@
         margin: 100vh 0;
     }
 
-    .my-skills .chart-area {
-        width: 60%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    .skill-set .card {
+        width: 150px;
+        height: 210px;
     }
 
-    .my-skills .chart-area .chart {
-        width: 500px;
-        height: 500px;
+    .skill-set .back {
+        font-size: 22px;
     }
 
 
-    /* チャートの説明欄 */
-    .my-skills .chart-area .chart-explanation {
-        width: 20vw;
-        height: 200px;
-    }
 
     /* **************** お問い合わせ画面 **************** */
     .contact {

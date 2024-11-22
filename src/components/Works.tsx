@@ -4,7 +4,7 @@ import mathQuestionBox from '../assets/img/みんなの数学質問箱.png'
 import myPortfolio from '../assets/img/ポートフォリオサイト.png'
 import Title from './Title';
 import { motion } from 'framer-motion';
-import { InView, useInView } from 'react-intersection-observer';
+import { InView } from 'react-intersection-observer';
 
 
 type WorkItemProps = {
