@@ -81,22 +81,25 @@ const Skills: React.FC = () => {
                 {iconList.map((skill) => (
                     <InView threshold={0.8}>
                         {({ref,inView}) => (
-                            <motion.div 
-                                className='card' 
+                            <motion.div
+                                className='card-area'
                                 ref={ref}
-                                initial={{opacity: 0}}
-                                animate={inView ? {opacity: 1} : {}}
-                                transition={{duration: 1.5}}
+                                initial={{opacity: 0, y: 50}}
+                                animate={inView ? {opacity: 1, y:0} : {}}
+                                transition={{duration: 0.5}}
                             >
-                                <div className='front'>
-                                    <img src={skill.img} alt={skill.name} />
-                                </div>
-                                <div className='back'>
-                                    <h3>{skill.name}</h3>
-                                    {levelDiscrimination(skill.level)}
-                                    <img src={skill.img} alt={skill.name} />
+                                <div className='card' >
+                                    <div className='front'>
+                                        <img src={skill.img} alt={skill.name} />
+                                    </div>
+                                    <div className='back'>
+                                        <h3>{skill.name}</h3>
+                                        {levelDiscrimination(skill.level)}
+                                        <img src={skill.img} alt={skill.name} />
+                                    </div>
                                 </div>
                             </motion.div>
+                            
                         )}
                     </InView>
                     
