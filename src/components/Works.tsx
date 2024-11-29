@@ -98,7 +98,7 @@ const Works = () => {
                 title='みんなの数学質問箱'
                 skills={['HTML','CSS','TypeScript','React','React Router','Firebase Firestore','Firebase Authentication','Fuse.js','Git','GitHub']}
                 explanation='数学に関する質問を投稿するWebサイトです。質問に対して回答したり、カテゴリやキーワードで検索する機能を作りました。また、Firebaseを用いてデータベースと認証機能を実装しました。TypeScriptやFirebase、ルーティングなど初めて使った技術が多かったため、かなりの試行錯誤が必要でした。この開発を通して学ぶことも多かったのでとても良い開発になりました。'
-                url={{github: 'https://github.com/LSbard000com/math-question-box-app', link:''}}
+                url={{github: 'https://github.com/LSbard000com/math-question-box-app', link:'https://mathquestionbox.netlify.app/'}}
                 setDetail={detailOpenAndClose}
                 setWorkInfo={setWorkInfo}
             />
