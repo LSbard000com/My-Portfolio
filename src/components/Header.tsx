@@ -39,7 +39,6 @@ const Header = () => {
                     <nav className="section-items">
                         <ul>
                             <li><a href='#top'>Top</a></li>
-                            <li><a href='#blog'>Blog</a></li>
                             <li><a href='#about'>About</a></li>
                             <li><a href='#works'>Works</a></li>
                             <li><a href='#skills'>Skills</a></li>
