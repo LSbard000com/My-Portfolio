@@ -13,7 +13,7 @@ interface NoteItem {
 const Rssfeed = () => {
     // noteから取得した最新のデータを格納
     const [noteFeeds, setNoteFeeds] = useState<NoteItem[]>([])
-    const rssFeedURL:string = 'https://rss.app/feeds/ddLRYgMx8hpcHaUu.xml'
+    const rssFeedURL:string = 'https://rss.app/feeds/TDM8SKrnSVp50kqi.xml'
 
     // rssfeedからデータを取得
     const getNoteFromRssFeed = async () => {
