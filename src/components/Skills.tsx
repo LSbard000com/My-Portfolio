@@ -82,6 +82,7 @@ const Skills: React.FC = () => {
                     <InView threshold={0.8}>
                         {({ref,inView}) => (
                             <motion.div
+                                key={skill.name}
                                 className='card-area'
                                 ref={ref}
                                 initial={{opacity: 0, y: 50}}

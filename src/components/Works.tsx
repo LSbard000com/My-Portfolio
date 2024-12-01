@@ -109,7 +109,7 @@ const Works = () => {
             <WorksItem 
                 img={myPortfolio}
                 title='ポートフォリオサイト'
-                skills={['HTML','CSS','TypeScript','React','Intersection Observer','Framer Motion','react-vertical-timeline-component','Chart.js','Vite','Git','GitHub',' Netlify']}
+                skills={['HTML','CSS','TypeScript','React','Node.js','Intersection Observer','Framer Motion','react-vertical-timeline-component','Vite','Git','GitHub','Netlify']}
                 explanation='自分のポートフォリオサイトです。Intersection ObserverとFramer Motionを用いたアニメーションをつけたり、レスポンシブデザインを考えたりとUIを意識して開発しました。また、Viteを用いて実行環境を構築してみました。デスクトップとモバイル画面、両方でご覧いただけると幸いです。'
                 url={{github: 'https://github.com/LSbard000com/My-Portfolio', link:'https://masatokomukai.netlify.app/'}}
                 setDetail={detailOpenAndClose}
