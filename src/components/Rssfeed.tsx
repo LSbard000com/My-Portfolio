@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios'; // フェッチ用
-import { XMLParser } from 'fast-xml-parser';
 
 interface NoteItem {
     title: string
@@ -10,34 +9,35 @@ interface NoteItem {
 }
 
 
+
 const Rssfeed = () => {
     // noteから取得した最新のデータを格納
     const [noteFeeds, setNoteFeeds] = useState<NoteItem[]>([])
-    const rssFeedURL:string = 'https://rss.app/feeds/TDM8SKrnSVp50kqi.xml'
+    const rssURL:string = 'https://rss-feed-updater.netlify.app/.netlify/functions/rss'
 
     // rssfeedからデータを取得
-    const getNoteFromRssFeed = async () => {
-        try {
-            const response = await axios.get<string>(rssFeedURL, { responseType : 'text'});
-            const parser = new XMLParser();
-            const parseData = parser.parse(response.data)
-            const items = parseData.rss.channel.item.slice(0,3)
-            setNoteFeeds(items as NoteItem[])
-        } catch(error:unknown) {
-            if(error){
-                console.log(`エラーをキャッチしました: ${error}`)
-            } else {
-                console.log("予期せぬエラーが発生しました。")
-            }
-             
-        }
-    }
-
     useEffect(() => {
+        const getNoteFromRssFeed = async () => {
+            try {
+                const response = await axios.get(rssURL);
+                const data = response.data.items.slice(0,3)
+                setNoteFeeds(data)
+                
+              } catch (err: unknown) {
+                // エラーを安全に処理
+                if (axios.isAxiosError(err)) {
+                    console.log(err.message);
+                } else {
+                  console.log('予期せぬエラーが発生しました。');
+                }
+              }
+        }
+
         getNoteFromRssFeed()
+
     },[])
 
-    // xmlで取得した日付を変換する関数
+    // 取得した日付を変換する関数
     const formatToMonthDay = (dateString:string) => {
         const date = new Date(dateString);
         return `${date.getMonth() + 1}/${date.getDate()}`;
