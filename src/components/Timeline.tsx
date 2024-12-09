@@ -35,7 +35,7 @@ const Timeline = () => {
         {
             id: 'event-2024-7',
             title: '2024 - July',
-            content: 'エンジニアになることを決意し本格的にプログラミングの学習を始める。Webエンジニアとしてのキャリアを軸に、HTML、CSS、JavaScriptの学習をする。現在はRactでの開発、Next.jsの学習に没頭中。',
+            content: 'エンジニアになることを決意し本格的にプログラミングの学習を始める。Webエンジニアとしてのキャリアを軸に、HTML、CSS、JavaScriptの学習をする。現在はReactでの開発、Next.jsの学習に没頭中。',
             icon: <i className="fa-solid fa-laptop"></i>
         },
     ]
